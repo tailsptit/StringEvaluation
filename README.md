@@ -5,8 +5,6 @@
   
 
 ## Introduction
-- Server receive string expression from client, evaluate expression 
-and return to client.
 - Using netcat tool as client to send string expression to server  
 - Using C++14, TCP Socket Server
 - Support 10K clients connection
@@ -16,26 +14,25 @@ and return to client.
 - gcc 9.3.0
 
 ## Build
- From current project
- - mkdir build
-         - cd build
-         - cmake ..
-         - make  
-## To get source code from  GitHub
-  - https://github.com/tailsptit/StringEvaluation.git
-  
-## Run
- ## To gen data
- ABC
- ### To run StringEvaluation using the generated data
- ABC
+#### Get source code
+- git clone https://github.com/tailsptit/StringEvaluation.git
+#### Build project
+From StringEvaluation path, execute commands
+- mkdir build
+- cd build
+- cmake ..
+- make  
 
-## Test 
-#### Create a customer using CREATE API using curl command
-   - Open terminal 
+## Run
+#### Generate data and save to file
+- ABC
+#### Run server
+- ABC
+#### Run client
+- StringEvaluation using the generated data
    nc -w 5 localhost port < file
    
-   - Example
+- Example
    nc -w 5 localhost 8081 < /home/tails/Documents/Project/C++/test0.txt
  
 ## Technical

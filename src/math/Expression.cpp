@@ -8,11 +8,12 @@
 
 std::string Expression::generate() {
     std::stringstream buffer;
+    int len = 1 + nextInt() % maxOperands;
 
     // Generates and appends the first number
     buffer << nextInt();
     int brackets = 0;
-    for (int i = 0; i < length; i++) {
+    for (int i = 0; i < len; i++) {
         // Generates random number
         int number = nextInt();
 
@@ -26,7 +27,7 @@ std::string Expression::generate() {
 
         // Creates a bracket
         bool inBrackets = false;
-        if (nextBool() && i != length - 1 && allowBrackets) {
+        if (nextBool() && i != len - 1 && allowBrackets) {
             buffer << "(";
             inBrackets = true;
             brackets++;
@@ -41,11 +42,12 @@ std::string Expression::generate() {
             brackets--;
         }
     }
+    // Ends all brackets
     for (int i = 0; i < brackets; i++) {
         buffer << ")";
     }
     brackets = 0;
-    // Ends all brackets
+    buffer << '\n';
     return buffer.str();
 }
 
@@ -53,7 +55,7 @@ void Expression::generateAndSaveFile(std::string file, int numExpression ) {
     std::ofstream buffer(file);
     for (int n = 0; n < numExpression; n++){
         // Generates and appends the first number
-        int len = 1 + nextInt() % maxLen;
+        int len = 1 + nextInt() % maxOperands;
         buffer << nextInt();
         int brackets = 0;
         for (int i = 0; i < len; i++) {
@@ -70,7 +72,7 @@ void Expression::generateAndSaveFile(std::string file, int numExpression ) {
 
             // Creates a bracket
             bool inBrackets = false;
-            if (nextBool() && i != length - 1 && allowBrackets) {
+            if (nextBool() && i != len - 1 && allowBrackets) {
                 buffer << "(";
                 inBrackets = true;
                 brackets++;

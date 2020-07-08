@@ -19,7 +19,7 @@ public:
             for (int i = 1; i < argc; i = i + 2) {
                 std::string tag(argv[i]);
                 if (tag.compare("-run-mode") == 0) {
-                    port = std::stoi(std::string(argv[i + 1]));
+                    run_mode = std::stoi(std::string(argv[i + 1]));
                 } else if (tag.compare("-port") == 0) {
                     port = std::stoi(std::string(argv[i + 1]));
                 } else if (tag.compare("-file") == 0) {
@@ -52,12 +52,15 @@ int main(int argc, char **argv) {
     Opt opt(argc, argv);
 
     if (opt.run_mode == 1) {
+        std::cout << "Generating data. No start server" << std::endl;
         DataFactory dataFactory;
         dataFactory.generate(opt.file, opt.maxOperands, opt.numExpressions, opt.allowBracket);
     } else if (opt.run_mode == 2) {
+        std::cout << "Start server" << std::endl;
         TcpServer server(opt.port, opt.poolSize);
         server.start();
     } else if (opt.run_mode == 3) {
+        std::cout << "Generating data & Start server" << std::endl;
         DataFactory dataFactory;
         dataFactory.generate(opt.file, opt.maxOperands, opt.numExpressions, opt.allowBracket);
         TcpServer server(opt.port, opt.poolSize);

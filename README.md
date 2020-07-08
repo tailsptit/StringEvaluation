@@ -65,3 +65,4 @@ From StringEvaluation path, execute commands
     nc -w 5 localhost 8081 < "/home/tails/Documents/Project/C++/test0.txt"
  
 ## Technical
+    N/A

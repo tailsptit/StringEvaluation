@@ -92,7 +92,7 @@ void TcpServer::handleReadRequest(int fd) {
                 std::cout << "OUTPUT: " << s << "       = " << res << std::endl;
                 s = "";
                 continue;
-            } else {
+            } else if (c != ' '){
                 s += c;
             }
 
@@ -174,7 +174,7 @@ void TcpServer::handleReadRequest(int fd) {
 }
 
 void TcpServer::handleWriteRequest(int fd) {
-    std::cout << "=======================Write_Handler() ..." << std::endl;
+    std::cout << "handleWriteRequest" << std::endl;
     Message *message = nullptr;
     {
         std::unique_lock<std::mutex> lock(mtx);

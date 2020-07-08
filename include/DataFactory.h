@@ -11,6 +11,7 @@ class DataFactory {
 public:
     DataFactory(){}
     void generate(const std::string& path, const std::string& file, int n, int range);
+    void generate(const string &path, const string &file, int n, int range, bool brice);
     void save();
 
     static char getOperator(int val);

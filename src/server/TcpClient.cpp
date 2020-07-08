@@ -8,7 +8,7 @@
 #include <algorithm>
 #include <cstring>
 
-#include "../include/TcpClient.h"
+#include "../../include/TcpClient.h"
 
 TcpClient::TcpClient(const std::string _hostname, const int port) : hostname_(_hostname), port_(port) {
     srand(time(NULL));

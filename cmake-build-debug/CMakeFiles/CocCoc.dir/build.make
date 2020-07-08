@@ -57,100 +57,126 @@ include CMakeFiles/CocCoc.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CocCoc.dir/flags.make
 
-CMakeFiles/CocCoc.dir/common/TcpClient.cpp.o: CMakeFiles/CocCoc.dir/flags.make
-CMakeFiles/CocCoc.dir/common/TcpClient.cpp.o: ../common/TcpClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CocCoc.dir/common/TcpClient.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/common/TcpClient.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/common/TcpClient.cpp
+CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.o: CMakeFiles/CocCoc.dir/flags.make
+CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.o: ../src/server/TcpClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/src/server/TcpClient.cpp
 
-CMakeFiles/CocCoc.dir/common/TcpClient.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/common/TcpClient.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/common/TcpClient.cpp > CMakeFiles/CocCoc.dir/common/TcpClient.cpp.i
+CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/src/server/TcpClient.cpp > CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.i
 
-CMakeFiles/CocCoc.dir/common/TcpClient.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/common/TcpClient.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/common/TcpClient.cpp -o CMakeFiles/CocCoc.dir/common/TcpClient.cpp.s
+CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/src/server/TcpClient.cpp -o CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.s
 
-CMakeFiles/CocCoc.dir/common/EventManager.cpp.o: CMakeFiles/CocCoc.dir/flags.make
-CMakeFiles/CocCoc.dir/common/EventManager.cpp.o: ../common/EventManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CocCoc.dir/common/EventManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/common/EventManager.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/common/EventManager.cpp
+CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.o: CMakeFiles/CocCoc.dir/flags.make
+CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.o: ../src/common/EventManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/src/common/EventManager.cpp
 
-CMakeFiles/CocCoc.dir/common/EventManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/common/EventManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/common/EventManager.cpp > CMakeFiles/CocCoc.dir/common/EventManager.cpp.i
+CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/src/common/EventManager.cpp > CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.i
 
-CMakeFiles/CocCoc.dir/common/EventManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/common/EventManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/common/EventManager.cpp -o CMakeFiles/CocCoc.dir/common/EventManager.cpp.s
+CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/src/common/EventManager.cpp -o CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.s
 
-CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.o: CMakeFiles/CocCoc.dir/flags.make
-CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.o: ../common/FileDescriptor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/common/FileDescriptor.cpp
+CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.o: CMakeFiles/CocCoc.dir/flags.make
+CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.o: ../src/common/FileDescriptor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/src/common/FileDescriptor.cpp
 
-CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/common/FileDescriptor.cpp > CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.i
+CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/src/common/FileDescriptor.cpp > CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.i
 
-CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/common/FileDescriptor.cpp -o CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.s
+CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/src/common/FileDescriptor.cpp -o CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.s
 
-CMakeFiles/CocCoc.dir/common/Math.cpp.o: CMakeFiles/CocCoc.dir/flags.make
-CMakeFiles/CocCoc.dir/common/Math.cpp.o: ../common/Math.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CocCoc.dir/common/Math.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/common/Math.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/common/Math.cpp
+CMakeFiles/CocCoc.dir/src/math/Math.cpp.o: CMakeFiles/CocCoc.dir/flags.make
+CMakeFiles/CocCoc.dir/src/math/Math.cpp.o: ../src/math/Math.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CocCoc.dir/src/math/Math.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/src/math/Math.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/src/math/Math.cpp
 
-CMakeFiles/CocCoc.dir/common/Math.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/common/Math.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/common/Math.cpp > CMakeFiles/CocCoc.dir/common/Math.cpp.i
+CMakeFiles/CocCoc.dir/src/math/Math.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/src/math/Math.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/src/math/Math.cpp > CMakeFiles/CocCoc.dir/src/math/Math.cpp.i
 
-CMakeFiles/CocCoc.dir/common/Math.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/common/Math.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/common/Math.cpp -o CMakeFiles/CocCoc.dir/common/Math.cpp.s
+CMakeFiles/CocCoc.dir/src/math/Math.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/src/math/Math.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/src/math/Math.cpp -o CMakeFiles/CocCoc.dir/src/math/Math.cpp.s
 
-CMakeFiles/CocCoc.dir/common/TcpServer.cpp.o: CMakeFiles/CocCoc.dir/flags.make
-CMakeFiles/CocCoc.dir/common/TcpServer.cpp.o: ../common/TcpServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CocCoc.dir/common/TcpServer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/common/TcpServer.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/common/TcpServer.cpp
+CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.o: CMakeFiles/CocCoc.dir/flags.make
+CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.o: ../src/server/TcpServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/src/server/TcpServer.cpp
 
-CMakeFiles/CocCoc.dir/common/TcpServer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/common/TcpServer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/common/TcpServer.cpp > CMakeFiles/CocCoc.dir/common/TcpServer.cpp.i
+CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/src/server/TcpServer.cpp > CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.i
 
-CMakeFiles/CocCoc.dir/common/TcpServer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/common/TcpServer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/common/TcpServer.cpp -o CMakeFiles/CocCoc.dir/common/TcpServer.cpp.s
+CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/src/server/TcpServer.cpp -o CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.s
 
-CMakeFiles/CocCoc.dir/common/Socket.cpp.o: CMakeFiles/CocCoc.dir/flags.make
-CMakeFiles/CocCoc.dir/common/Socket.cpp.o: ../common/Socket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CocCoc.dir/common/Socket.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/common/Socket.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/common/Socket.cpp
+CMakeFiles/CocCoc.dir/src/common/Socket.cpp.o: CMakeFiles/CocCoc.dir/flags.make
+CMakeFiles/CocCoc.dir/src/common/Socket.cpp.o: ../src/common/Socket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CocCoc.dir/src/common/Socket.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/src/common/Socket.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/src/common/Socket.cpp
 
-CMakeFiles/CocCoc.dir/common/Socket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/common/Socket.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/common/Socket.cpp > CMakeFiles/CocCoc.dir/common/Socket.cpp.i
+CMakeFiles/CocCoc.dir/src/common/Socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/src/common/Socket.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/src/common/Socket.cpp > CMakeFiles/CocCoc.dir/src/common/Socket.cpp.i
 
-CMakeFiles/CocCoc.dir/common/Socket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/common/Socket.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/common/Socket.cpp -o CMakeFiles/CocCoc.dir/common/Socket.cpp.s
+CMakeFiles/CocCoc.dir/src/common/Socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/src/common/Socket.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/src/common/Socket.cpp -o CMakeFiles/CocCoc.dir/src/common/Socket.cpp.s
 
-CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.o: CMakeFiles/CocCoc.dir/flags.make
-CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.o: ../common/ThreadPool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/common/ThreadPool.cpp
+CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.o: CMakeFiles/CocCoc.dir/flags.make
+CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.o: ../src/common/ThreadPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/src/common/ThreadPool.cpp
 
-CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/common/ThreadPool.cpp > CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.i
+CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/src/common/ThreadPool.cpp > CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.i
 
-CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/common/ThreadPool.cpp -o CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.s
+CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/src/common/ThreadPool.cpp -o CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.s
+
+CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.o: CMakeFiles/CocCoc.dir/flags.make
+CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.o: ../src/factory/DataFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/src/factory/DataFactory.cpp
+
+CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/src/factory/DataFactory.cpp > CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.i
+
+CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/src/factory/DataFactory.cpp -o CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.s
+
+CMakeFiles/CocCoc.dir/src/math/Expression.cpp.o: CMakeFiles/CocCoc.dir/flags.make
+CMakeFiles/CocCoc.dir/src/math/Expression.cpp.o: ../src/math/Expression.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CocCoc.dir/src/math/Expression.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/src/math/Expression.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/src/math/Expression.cpp
+
+CMakeFiles/CocCoc.dir/src/math/Expression.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/src/math/Expression.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/src/math/Expression.cpp > CMakeFiles/CocCoc.dir/src/math/Expression.cpp.i
+
+CMakeFiles/CocCoc.dir/src/math/Expression.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/src/math/Expression.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/src/math/Expression.cpp -o CMakeFiles/CocCoc.dir/src/math/Expression.cpp.s
 
 CMakeFiles/CocCoc.dir/mainServer.cpp.o: CMakeFiles/CocCoc.dir/flags.make
 CMakeFiles/CocCoc.dir/mainServer.cpp.o: ../mainServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CocCoc.dir/mainServer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CocCoc.dir/mainServer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/mainServer.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/mainServer.cpp
 
 CMakeFiles/CocCoc.dir/mainServer.cpp.i: cmake_force
@@ -161,46 +187,35 @@ CMakeFiles/CocCoc.dir/mainServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/mainServer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/mainServer.cpp -o CMakeFiles/CocCoc.dir/mainServer.cpp.s
 
-CMakeFiles/CocCoc.dir/common/DataFactory.cpp.o: CMakeFiles/CocCoc.dir/flags.make
-CMakeFiles/CocCoc.dir/common/DataFactory.cpp.o: ../common/DataFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CocCoc.dir/common/DataFactory.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CocCoc.dir/common/DataFactory.cpp.o -c /home/tails/Documents/Project/C++/CocCoc/common/DataFactory.cpp
-
-CMakeFiles/CocCoc.dir/common/DataFactory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocCoc.dir/common/DataFactory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tails/Documents/Project/C++/CocCoc/common/DataFactory.cpp > CMakeFiles/CocCoc.dir/common/DataFactory.cpp.i
-
-CMakeFiles/CocCoc.dir/common/DataFactory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocCoc.dir/common/DataFactory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tails/Documents/Project/C++/CocCoc/common/DataFactory.cpp -o CMakeFiles/CocCoc.dir/common/DataFactory.cpp.s
-
 # Object files for target CocCoc
 CocCoc_OBJECTS = \
-"CMakeFiles/CocCoc.dir/common/TcpClient.cpp.o" \
-"CMakeFiles/CocCoc.dir/common/EventManager.cpp.o" \
-"CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.o" \
-"CMakeFiles/CocCoc.dir/common/Math.cpp.o" \
-"CMakeFiles/CocCoc.dir/common/TcpServer.cpp.o" \
-"CMakeFiles/CocCoc.dir/common/Socket.cpp.o" \
-"CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.o" \
-"CMakeFiles/CocCoc.dir/mainServer.cpp.o" \
-"CMakeFiles/CocCoc.dir/common/DataFactory.cpp.o"
+"CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.o" \
+"CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.o" \
+"CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.o" \
+"CMakeFiles/CocCoc.dir/src/math/Math.cpp.o" \
+"CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.o" \
+"CMakeFiles/CocCoc.dir/src/common/Socket.cpp.o" \
+"CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.o" \
+"CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.o" \
+"CMakeFiles/CocCoc.dir/src/math/Expression.cpp.o" \
+"CMakeFiles/CocCoc.dir/mainServer.cpp.o"
 
 # External object files for target CocCoc
 CocCoc_EXTERNAL_OBJECTS =
 
-CocCoc: CMakeFiles/CocCoc.dir/common/TcpClient.cpp.o
-CocCoc: CMakeFiles/CocCoc.dir/common/EventManager.cpp.o
-CocCoc: CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.o
-CocCoc: CMakeFiles/CocCoc.dir/common/Math.cpp.o
-CocCoc: CMakeFiles/CocCoc.dir/common/TcpServer.cpp.o
-CocCoc: CMakeFiles/CocCoc.dir/common/Socket.cpp.o
-CocCoc: CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.o
+CocCoc: CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.o
+CocCoc: CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.o
+CocCoc: CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.o
+CocCoc: CMakeFiles/CocCoc.dir/src/math/Math.cpp.o
+CocCoc: CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.o
+CocCoc: CMakeFiles/CocCoc.dir/src/common/Socket.cpp.o
+CocCoc: CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.o
+CocCoc: CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.o
+CocCoc: CMakeFiles/CocCoc.dir/src/math/Expression.cpp.o
 CocCoc: CMakeFiles/CocCoc.dir/mainServer.cpp.o
-CocCoc: CMakeFiles/CocCoc.dir/common/DataFactory.cpp.o
 CocCoc: CMakeFiles/CocCoc.dir/build.make
 CocCoc: CMakeFiles/CocCoc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable CocCoc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable CocCoc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CocCoc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

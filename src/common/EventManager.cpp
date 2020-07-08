@@ -1,8 +1,8 @@
 #include <unistd.h>
 #include <iostream>
 
-#include "../include/Utils.h"
-#include "../include/EventManager.h"
+#include "../../include/Utils.h"
+#include "../../include/EventManager.h"
 
 // ---------------------------- EventManager -------------------------------- //
 EventManager::EventManager(int _poolSize) {

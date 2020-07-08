@@ -123,222 +123,6 @@ CocCoc/fast:
 	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/build
 .PHONY : CocCoc/fast
 
-common/DataFactory.o: common/DataFactory.cpp.o
-
-.PHONY : common/DataFactory.o
-
-# target to build an object file
-common/DataFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/DataFactory.cpp.o
-.PHONY : common/DataFactory.cpp.o
-
-common/DataFactory.i: common/DataFactory.cpp.i
-
-.PHONY : common/DataFactory.i
-
-# target to preprocess a source file
-common/DataFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/DataFactory.cpp.i
-.PHONY : common/DataFactory.cpp.i
-
-common/DataFactory.s: common/DataFactory.cpp.s
-
-.PHONY : common/DataFactory.s
-
-# target to generate assembly for a file
-common/DataFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/DataFactory.cpp.s
-.PHONY : common/DataFactory.cpp.s
-
-common/EventManager.o: common/EventManager.cpp.o
-
-.PHONY : common/EventManager.o
-
-# target to build an object file
-common/EventManager.cpp.o:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/EventManager.cpp.o
-.PHONY : common/EventManager.cpp.o
-
-common/EventManager.i: common/EventManager.cpp.i
-
-.PHONY : common/EventManager.i
-
-# target to preprocess a source file
-common/EventManager.cpp.i:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/EventManager.cpp.i
-.PHONY : common/EventManager.cpp.i
-
-common/EventManager.s: common/EventManager.cpp.s
-
-.PHONY : common/EventManager.s
-
-# target to generate assembly for a file
-common/EventManager.cpp.s:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/EventManager.cpp.s
-.PHONY : common/EventManager.cpp.s
-
-common/FileDescriptor.o: common/FileDescriptor.cpp.o
-
-.PHONY : common/FileDescriptor.o
-
-# target to build an object file
-common/FileDescriptor.cpp.o:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.o
-.PHONY : common/FileDescriptor.cpp.o
-
-common/FileDescriptor.i: common/FileDescriptor.cpp.i
-
-.PHONY : common/FileDescriptor.i
-
-# target to preprocess a source file
-common/FileDescriptor.cpp.i:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.i
-.PHONY : common/FileDescriptor.cpp.i
-
-common/FileDescriptor.s: common/FileDescriptor.cpp.s
-
-.PHONY : common/FileDescriptor.s
-
-# target to generate assembly for a file
-common/FileDescriptor.cpp.s:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.s
-.PHONY : common/FileDescriptor.cpp.s
-
-common/Math.o: common/Math.cpp.o
-
-.PHONY : common/Math.o
-
-# target to build an object file
-common/Math.cpp.o:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/Math.cpp.o
-.PHONY : common/Math.cpp.o
-
-common/Math.i: common/Math.cpp.i
-
-.PHONY : common/Math.i
-
-# target to preprocess a source file
-common/Math.cpp.i:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/Math.cpp.i
-.PHONY : common/Math.cpp.i
-
-common/Math.s: common/Math.cpp.s
-
-.PHONY : common/Math.s
-
-# target to generate assembly for a file
-common/Math.cpp.s:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/Math.cpp.s
-.PHONY : common/Math.cpp.s
-
-common/Socket.o: common/Socket.cpp.o
-
-.PHONY : common/Socket.o
-
-# target to build an object file
-common/Socket.cpp.o:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/Socket.cpp.o
-.PHONY : common/Socket.cpp.o
-
-common/Socket.i: common/Socket.cpp.i
-
-.PHONY : common/Socket.i
-
-# target to preprocess a source file
-common/Socket.cpp.i:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/Socket.cpp.i
-.PHONY : common/Socket.cpp.i
-
-common/Socket.s: common/Socket.cpp.s
-
-.PHONY : common/Socket.s
-
-# target to generate assembly for a file
-common/Socket.cpp.s:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/Socket.cpp.s
-.PHONY : common/Socket.cpp.s
-
-common/TcpClient.o: common/TcpClient.cpp.o
-
-.PHONY : common/TcpClient.o
-
-# target to build an object file
-common/TcpClient.cpp.o:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/TcpClient.cpp.o
-.PHONY : common/TcpClient.cpp.o
-
-common/TcpClient.i: common/TcpClient.cpp.i
-
-.PHONY : common/TcpClient.i
-
-# target to preprocess a source file
-common/TcpClient.cpp.i:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/TcpClient.cpp.i
-.PHONY : common/TcpClient.cpp.i
-
-common/TcpClient.s: common/TcpClient.cpp.s
-
-.PHONY : common/TcpClient.s
-
-# target to generate assembly for a file
-common/TcpClient.cpp.s:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/TcpClient.cpp.s
-.PHONY : common/TcpClient.cpp.s
-
-common/TcpServer.o: common/TcpServer.cpp.o
-
-.PHONY : common/TcpServer.o
-
-# target to build an object file
-common/TcpServer.cpp.o:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/TcpServer.cpp.o
-.PHONY : common/TcpServer.cpp.o
-
-common/TcpServer.i: common/TcpServer.cpp.i
-
-.PHONY : common/TcpServer.i
-
-# target to preprocess a source file
-common/TcpServer.cpp.i:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/TcpServer.cpp.i
-.PHONY : common/TcpServer.cpp.i
-
-common/TcpServer.s: common/TcpServer.cpp.s
-
-.PHONY : common/TcpServer.s
-
-# target to generate assembly for a file
-common/TcpServer.cpp.s:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/TcpServer.cpp.s
-.PHONY : common/TcpServer.cpp.s
-
-common/ThreadPool.o: common/ThreadPool.cpp.o
-
-.PHONY : common/ThreadPool.o
-
-# target to build an object file
-common/ThreadPool.cpp.o:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.o
-.PHONY : common/ThreadPool.cpp.o
-
-common/ThreadPool.i: common/ThreadPool.cpp.i
-
-.PHONY : common/ThreadPool.i
-
-# target to preprocess a source file
-common/ThreadPool.cpp.i:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.i
-.PHONY : common/ThreadPool.cpp.i
-
-common/ThreadPool.s: common/ThreadPool.cpp.s
-
-.PHONY : common/ThreadPool.s
-
-# target to generate assembly for a file
-common/ThreadPool.cpp.s:
-	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.s
-.PHONY : common/ThreadPool.cpp.s
-
 mainServer.o: mainServer.cpp.o
 
 .PHONY : mainServer.o
@@ -366,6 +150,249 @@ mainServer.cpp.s:
 	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/mainServer.cpp.s
 .PHONY : mainServer.cpp.s
 
+src/common/EventManager.o: src/common/EventManager.cpp.o
+
+.PHONY : src/common/EventManager.o
+
+# target to build an object file
+src/common/EventManager.cpp.o:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.o
+.PHONY : src/common/EventManager.cpp.o
+
+src/common/EventManager.i: src/common/EventManager.cpp.i
+
+.PHONY : src/common/EventManager.i
+
+# target to preprocess a source file
+src/common/EventManager.cpp.i:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.i
+.PHONY : src/common/EventManager.cpp.i
+
+src/common/EventManager.s: src/common/EventManager.cpp.s
+
+.PHONY : src/common/EventManager.s
+
+# target to generate assembly for a file
+src/common/EventManager.cpp.s:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.s
+.PHONY : src/common/EventManager.cpp.s
+
+src/common/FileDescriptor.o: src/common/FileDescriptor.cpp.o
+
+.PHONY : src/common/FileDescriptor.o
+
+# target to build an object file
+src/common/FileDescriptor.cpp.o:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.o
+.PHONY : src/common/FileDescriptor.cpp.o
+
+src/common/FileDescriptor.i: src/common/FileDescriptor.cpp.i
+
+.PHONY : src/common/FileDescriptor.i
+
+# target to preprocess a source file
+src/common/FileDescriptor.cpp.i:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.i
+.PHONY : src/common/FileDescriptor.cpp.i
+
+src/common/FileDescriptor.s: src/common/FileDescriptor.cpp.s
+
+.PHONY : src/common/FileDescriptor.s
+
+# target to generate assembly for a file
+src/common/FileDescriptor.cpp.s:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.s
+.PHONY : src/common/FileDescriptor.cpp.s
+
+src/common/Socket.o: src/common/Socket.cpp.o
+
+.PHONY : src/common/Socket.o
+
+# target to build an object file
+src/common/Socket.cpp.o:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/common/Socket.cpp.o
+.PHONY : src/common/Socket.cpp.o
+
+src/common/Socket.i: src/common/Socket.cpp.i
+
+.PHONY : src/common/Socket.i
+
+# target to preprocess a source file
+src/common/Socket.cpp.i:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/common/Socket.cpp.i
+.PHONY : src/common/Socket.cpp.i
+
+src/common/Socket.s: src/common/Socket.cpp.s
+
+.PHONY : src/common/Socket.s
+
+# target to generate assembly for a file
+src/common/Socket.cpp.s:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/common/Socket.cpp.s
+.PHONY : src/common/Socket.cpp.s
+
+src/common/ThreadPool.o: src/common/ThreadPool.cpp.o
+
+.PHONY : src/common/ThreadPool.o
+
+# target to build an object file
+src/common/ThreadPool.cpp.o:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.o
+.PHONY : src/common/ThreadPool.cpp.o
+
+src/common/ThreadPool.i: src/common/ThreadPool.cpp.i
+
+.PHONY : src/common/ThreadPool.i
+
+# target to preprocess a source file
+src/common/ThreadPool.cpp.i:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.i
+.PHONY : src/common/ThreadPool.cpp.i
+
+src/common/ThreadPool.s: src/common/ThreadPool.cpp.s
+
+.PHONY : src/common/ThreadPool.s
+
+# target to generate assembly for a file
+src/common/ThreadPool.cpp.s:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.s
+.PHONY : src/common/ThreadPool.cpp.s
+
+src/factory/DataFactory.o: src/factory/DataFactory.cpp.o
+
+.PHONY : src/factory/DataFactory.o
+
+# target to build an object file
+src/factory/DataFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.o
+.PHONY : src/factory/DataFactory.cpp.o
+
+src/factory/DataFactory.i: src/factory/DataFactory.cpp.i
+
+.PHONY : src/factory/DataFactory.i
+
+# target to preprocess a source file
+src/factory/DataFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.i
+.PHONY : src/factory/DataFactory.cpp.i
+
+src/factory/DataFactory.s: src/factory/DataFactory.cpp.s
+
+.PHONY : src/factory/DataFactory.s
+
+# target to generate assembly for a file
+src/factory/DataFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.s
+.PHONY : src/factory/DataFactory.cpp.s
+
+src/math/Expression.o: src/math/Expression.cpp.o
+
+.PHONY : src/math/Expression.o
+
+# target to build an object file
+src/math/Expression.cpp.o:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/math/Expression.cpp.o
+.PHONY : src/math/Expression.cpp.o
+
+src/math/Expression.i: src/math/Expression.cpp.i
+
+.PHONY : src/math/Expression.i
+
+# target to preprocess a source file
+src/math/Expression.cpp.i:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/math/Expression.cpp.i
+.PHONY : src/math/Expression.cpp.i
+
+src/math/Expression.s: src/math/Expression.cpp.s
+
+.PHONY : src/math/Expression.s
+
+# target to generate assembly for a file
+src/math/Expression.cpp.s:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/math/Expression.cpp.s
+.PHONY : src/math/Expression.cpp.s
+
+src/math/Math.o: src/math/Math.cpp.o
+
+.PHONY : src/math/Math.o
+
+# target to build an object file
+src/math/Math.cpp.o:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/math/Math.cpp.o
+.PHONY : src/math/Math.cpp.o
+
+src/math/Math.i: src/math/Math.cpp.i
+
+.PHONY : src/math/Math.i
+
+# target to preprocess a source file
+src/math/Math.cpp.i:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/math/Math.cpp.i
+.PHONY : src/math/Math.cpp.i
+
+src/math/Math.s: src/math/Math.cpp.s
+
+.PHONY : src/math/Math.s
+
+# target to generate assembly for a file
+src/math/Math.cpp.s:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/math/Math.cpp.s
+.PHONY : src/math/Math.cpp.s
+
+src/server/TcpClient.o: src/server/TcpClient.cpp.o
+
+.PHONY : src/server/TcpClient.o
+
+# target to build an object file
+src/server/TcpClient.cpp.o:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.o
+.PHONY : src/server/TcpClient.cpp.o
+
+src/server/TcpClient.i: src/server/TcpClient.cpp.i
+
+.PHONY : src/server/TcpClient.i
+
+# target to preprocess a source file
+src/server/TcpClient.cpp.i:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.i
+.PHONY : src/server/TcpClient.cpp.i
+
+src/server/TcpClient.s: src/server/TcpClient.cpp.s
+
+.PHONY : src/server/TcpClient.s
+
+# target to generate assembly for a file
+src/server/TcpClient.cpp.s:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.s
+.PHONY : src/server/TcpClient.cpp.s
+
+src/server/TcpServer.o: src/server/TcpServer.cpp.o
+
+.PHONY : src/server/TcpServer.o
+
+# target to build an object file
+src/server/TcpServer.cpp.o:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.o
+.PHONY : src/server/TcpServer.cpp.o
+
+src/server/TcpServer.i: src/server/TcpServer.cpp.i
+
+.PHONY : src/server/TcpServer.i
+
+# target to preprocess a source file
+src/server/TcpServer.cpp.i:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.i
+.PHONY : src/server/TcpServer.cpp.i
+
+src/server/TcpServer.s: src/server/TcpServer.cpp.s
+
+.PHONY : src/server/TcpServer.s
+
+# target to generate assembly for a file
+src/server/TcpServer.cpp.s:
+	$(MAKE) -f CMakeFiles/CocCoc.dir/build.make CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.s
+.PHONY : src/server/TcpServer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -375,33 +402,36 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... CocCoc"
-	@echo "... common/DataFactory.o"
-	@echo "... common/DataFactory.i"
-	@echo "... common/DataFactory.s"
-	@echo "... common/EventManager.o"
-	@echo "... common/EventManager.i"
-	@echo "... common/EventManager.s"
-	@echo "... common/FileDescriptor.o"
-	@echo "... common/FileDescriptor.i"
-	@echo "... common/FileDescriptor.s"
-	@echo "... common/Math.o"
-	@echo "... common/Math.i"
-	@echo "... common/Math.s"
-	@echo "... common/Socket.o"
-	@echo "... common/Socket.i"
-	@echo "... common/Socket.s"
-	@echo "... common/TcpClient.o"
-	@echo "... common/TcpClient.i"
-	@echo "... common/TcpClient.s"
-	@echo "... common/TcpServer.o"
-	@echo "... common/TcpServer.i"
-	@echo "... common/TcpServer.s"
-	@echo "... common/ThreadPool.o"
-	@echo "... common/ThreadPool.i"
-	@echo "... common/ThreadPool.s"
 	@echo "... mainServer.o"
 	@echo "... mainServer.i"
 	@echo "... mainServer.s"
+	@echo "... src/common/EventManager.o"
+	@echo "... src/common/EventManager.i"
+	@echo "... src/common/EventManager.s"
+	@echo "... src/common/FileDescriptor.o"
+	@echo "... src/common/FileDescriptor.i"
+	@echo "... src/common/FileDescriptor.s"
+	@echo "... src/common/Socket.o"
+	@echo "... src/common/Socket.i"
+	@echo "... src/common/Socket.s"
+	@echo "... src/common/ThreadPool.o"
+	@echo "... src/common/ThreadPool.i"
+	@echo "... src/common/ThreadPool.s"
+	@echo "... src/factory/DataFactory.o"
+	@echo "... src/factory/DataFactory.i"
+	@echo "... src/factory/DataFactory.s"
+	@echo "... src/math/Expression.o"
+	@echo "... src/math/Expression.i"
+	@echo "... src/math/Expression.s"
+	@echo "... src/math/Math.o"
+	@echo "... src/math/Math.i"
+	@echo "... src/math/Math.s"
+	@echo "... src/server/TcpClient.o"
+	@echo "... src/server/TcpClient.i"
+	@echo "... src/server/TcpClient.s"
+	@echo "... src/server/TcpServer.o"
+	@echo "... src/server/TcpServer.i"
+	@echo "... src/server/TcpServer.s"
 .PHONY : help
 
 

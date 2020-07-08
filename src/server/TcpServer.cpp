@@ -5,10 +5,10 @@
 #include <arpa/inet.h>
 #include <iostream>
 
-#include "../include/Strings.h"
-#include "../include/TcpServer.h"
-#include "../include/Math.h"
-#include "../include/BufferedDataReader.h"
+#include "../../include/Strings.h"
+#include "../../include/TcpServer.h"
+#include "../../include/Math.h"
+#include "../../include/BufferedDataReader.h"
 
 #define BUFFER_SIZE 3
 
@@ -80,7 +80,7 @@ void TcpServer::handleReadRequest(int fd) {
     BufferedDataReader br(std::move(upClientSocket));
     std::cout << "Create a buffered data reader on the socket" << std::endl;
 
-    // Try to parse header line "getSize = value\n" to getNumEvents data length;
+    // Try to parse header line "getSize = value\n" to get data length;
     int nread = 0;
     string s = "";
     if (message->getState() == Message::INIT) {

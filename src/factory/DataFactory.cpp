@@ -8,7 +8,7 @@
 #include <random>
 #include <iostream>
 
-#include "../include/DataFactory.h"
+#include "../../include/DataFactory.h"
 
 using namespace std;
 
@@ -28,7 +28,7 @@ void DataFactory::generate(const string &path, const string &file, int n, int ra
     output_file.close();
 }
 
-void DataFactory::generate(const string &path, const string &file, int n, int range, bool brice) {
+void DataFactory::generate(const std::string &path, const std::string &file, int n, int range, bool brice) {
     ofstream output_file(path + file);
     std::random_device rd;
     std::mt19937 gen(rd());

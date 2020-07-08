@@ -20,11 +20,16 @@ add_executable(CocCoc
         include/Message.h
         include/Event.h
         include/Epoll.h
-        common/TcpClient.cpp
-        common/EventManager.cpp
-        common/FileDescriptor.cpp
-        common/Math.cpp
-        common/TcpServer.cpp
-        common/Socket.cpp
-        common/ThreadPool.cpp
-        mainServer.cpp common/DataFactory.cpp include/DataFactory.h)
+        include/DataFactory.h
+        include/Expression.h
+        src/server/TcpClient.cpp
+        src/common/EventManager.cpp
+        src/common/FileDescriptor.cpp
+        src/math/Math.cpp
+        src/server/TcpServer.cpp
+        src/common/Socket.cpp
+        src/common/ThreadPool.cpp
+        src/factory/DataFactory.cpp
+        src/math/Expression.cpp
+        mainServer.cpp
+        )

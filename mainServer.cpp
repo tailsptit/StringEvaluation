@@ -22,13 +22,23 @@
 
 using namespace std;
 
+class Opt{
+public:
+    Opt(int argc, char **argv){
+        
+    }
+};
+
 int main(int argc, char **argv) {
+    Opt opt(argc, argv);
+
     int port = 8081;
     if (argc > 1) {
         port = std::stoi(std::string(argv[1]));
     }
     TcpServer server(port, 5);
     server.start();
+
 //    DataFactory dataFactory;
 //    dataFactory.generate("/home/tails/Documents/Project/C++/", "test0.txt", 10, 100);
 
@@ -75,7 +85,7 @@ int main(int argc, char **argv) {
 //    cout << "float getSize: " << sizeof(f) << endl;
 //    cout << "double getSize: " << sizeof(d) << endl;
 
-//    string expression;
+//    string factory;
 //    Math math;
 //    math.generateData();
 //    string datafile = "test0";
@@ -85,25 +95,25 @@ int main(int argc, char **argv) {
 //    string output_file = "/home/tails/Documents/Project/C++/" + datafile + "_out.txt";
 //
 //    ifile.open(input_file);
-//    getline(ifile, expression);
-////    cout << "Input: " << expression << "\n";
-//    string postfix = math.postfixConversion(expression);
+//    getline(ifile, factory);
+////    cout << "Input: " << factory << "\n";
+//    string postfix = math.postfixConversion(factory);
 //    ifile.closeFd();
 //    cout << "postfixConversion completed: \n";
-//    expression.clear();
+//    factory.clear();
 //    ofile.open(output_file);
 //    ofile << "Output:" << postfix << "\n";
 //    ofile.closeFd();
 //
 //    ifile.open(output_file);
-////    getline(ifile, expression);
+////    getline(ifile, factory);
 //    int result = math.evaluatePostfix(postfix);
 //    cout << "Output = " << result << "\n";
 //    ofile.closeFd();
 }
 
 //int main() {
-//    string expression;
+//    string factory;
 //    Math math;
 //    math.generateData();
 //    string datafile = "test0";
@@ -134,9 +144,9 @@ int main(int argc, char **argv) {
 //    ifile.closeFd();
 ////
 ////
-////    getline(ifile, expression);
-//////    cout << "Input: " << expression << "\n";
-////    string postfix = math.postfixConversion(expression);
+////    getline(ifile, factory);
+//////    cout << "Input: " << factory << "\n";
+////    string postfix = math.postfixConversion(factory);
 ////    ifile.closeFd();
 ////
 ////    ofile.open(output_file);
@@ -144,8 +154,8 @@ int main(int argc, char **argv) {
 ////    ofile.closeFd();
 ////
 ////    ifile.open(output_file);
-////    getline(ifile, expression);
-////    int result = math.evaluatePostfix(expression);
+////    getline(ifile, factory);
+////    int result = math.evaluatePostfix(factory);
 ////    cout << "Output = " << result << "\n";
 ////    ofile.closeFd();
 //}

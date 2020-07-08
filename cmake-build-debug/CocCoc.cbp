@@ -82,30 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/common/DataFactory.cpp">
-			<Option target="CocCoc"/>
-		</Unit>
-		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/common/EventManager.cpp">
-			<Option target="CocCoc"/>
-		</Unit>
-		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/common/FileDescriptor.cpp">
-			<Option target="CocCoc"/>
-		</Unit>
-		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/common/Math.cpp">
-			<Option target="CocCoc"/>
-		</Unit>
-		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/common/Socket.cpp">
-			<Option target="CocCoc"/>
-		</Unit>
-		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/common/TcpClient.cpp">
-			<Option target="CocCoc"/>
-		</Unit>
-		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/common/TcpServer.cpp">
-			<Option target="CocCoc"/>
-		</Unit>
-		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/common/ThreadPool.cpp">
-			<Option target="CocCoc"/>
-		</Unit>
 		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/include/BufferedDataReader.h">
 			<Option target="CocCoc"/>
 		</Unit>
@@ -122,6 +98,9 @@
 			<Option target="CocCoc"/>
 		</Unit>
 		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/include/EventManager.h">
+			<Option target="CocCoc"/>
+		</Unit>
+		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/include/Expression.h">
 			<Option target="CocCoc"/>
 		</Unit>
 		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/include/FileDescriptor.h">
@@ -155,6 +134,33 @@
 			<Option target="CocCoc"/>
 		</Unit>
 		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/mainServer.cpp">
+			<Option target="CocCoc"/>
+		</Unit>
+		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/src/common/EventManager.cpp">
+			<Option target="CocCoc"/>
+		</Unit>
+		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/src/common/FileDescriptor.cpp">
+			<Option target="CocCoc"/>
+		</Unit>
+		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/src/common/Socket.cpp">
+			<Option target="CocCoc"/>
+		</Unit>
+		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/src/common/ThreadPool.cpp">
+			<Option target="CocCoc"/>
+		</Unit>
+		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/src/factory/DataFactory.cpp">
+			<Option target="CocCoc"/>
+		</Unit>
+		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/src/math/Expression.cpp">
+			<Option target="CocCoc"/>
+		</Unit>
+		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/src/math/Math.cpp">
+			<Option target="CocCoc"/>
+		</Unit>
+		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/src/server/TcpClient.cpp">
+			<Option target="CocCoc"/>
+		</Unit>
+		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/src/server/TcpServer.cpp">
 			<Option target="CocCoc"/>
 		</Unit>
 		<Unit filename="/home/tails/Documents/Project/C++/CocCoc/CMakeLists.txt">

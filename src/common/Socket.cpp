@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <sys/socket.h>
 
-#include "../include/Socket.h"
+#include "../../include/Socket.h"
 
 Socket *Socket::createClientSocket(const std::string hostname, const int port, bool block) {
     struct sockaddr_in server_addr;

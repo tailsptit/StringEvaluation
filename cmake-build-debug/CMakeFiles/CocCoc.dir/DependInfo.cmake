@@ -4,15 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/tails/Documents/Project/C++/CocCoc/common/DataFactory.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/common/DataFactory.cpp.o"
-  "/home/tails/Documents/Project/C++/CocCoc/common/EventManager.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/common/EventManager.cpp.o"
-  "/home/tails/Documents/Project/C++/CocCoc/common/FileDescriptor.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/common/FileDescriptor.cpp.o"
-  "/home/tails/Documents/Project/C++/CocCoc/common/Math.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/common/Math.cpp.o"
-  "/home/tails/Documents/Project/C++/CocCoc/common/Socket.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/common/Socket.cpp.o"
-  "/home/tails/Documents/Project/C++/CocCoc/common/TcpClient.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/common/TcpClient.cpp.o"
-  "/home/tails/Documents/Project/C++/CocCoc/common/TcpServer.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/common/TcpServer.cpp.o"
-  "/home/tails/Documents/Project/C++/CocCoc/common/ThreadPool.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/common/ThreadPool.cpp.o"
   "/home/tails/Documents/Project/C++/CocCoc/mainServer.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/mainServer.cpp.o"
+  "/home/tails/Documents/Project/C++/CocCoc/src/common/EventManager.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/src/common/EventManager.cpp.o"
+  "/home/tails/Documents/Project/C++/CocCoc/src/common/FileDescriptor.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/src/common/FileDescriptor.cpp.o"
+  "/home/tails/Documents/Project/C++/CocCoc/src/common/Socket.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/src/common/Socket.cpp.o"
+  "/home/tails/Documents/Project/C++/CocCoc/src/common/ThreadPool.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/src/common/ThreadPool.cpp.o"
+  "/home/tails/Documents/Project/C++/CocCoc/src/factory/DataFactory.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/src/factory/DataFactory.cpp.o"
+  "/home/tails/Documents/Project/C++/CocCoc/src/math/Expression.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/src/math/Expression.cpp.o"
+  "/home/tails/Documents/Project/C++/CocCoc/src/math/Math.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/src/math/Math.cpp.o"
+  "/home/tails/Documents/Project/C++/CocCoc/src/server/TcpClient.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/src/server/TcpClient.cpp.o"
+  "/home/tails/Documents/Project/C++/CocCoc/src/server/TcpServer.cpp" "/home/tails/Documents/Project/C++/CocCoc/cmake-build-debug/CMakeFiles/CocCoc.dir/src/server/TcpServer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

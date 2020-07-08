@@ -6,7 +6,7 @@
 #include <sstream>
 #include <iostream>
 
-#include "../include/Math.h"
+#include "../../include/Math.h"
 
 bool Math::isOperator(char c) {
     return (c == '+') || (c == '-') || (c == '*') || (c == '/');

@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_TCPCLIENT_H
-#define COCCOC_TCPCLIENT_H
+#ifndef STRINGEVALUATION_TCPCLIENT_H
+#define STRINGEVALUATION_TCPCLIENT_H
 
 #include <map>
 #include <mutex>
@@ -27,4 +27,4 @@ private:
     const int port_;
 };
 
-#endif  /* COCCOC_TCPCLIENT_H */
+#endif  /* STRINGEVALUATION_TCPCLIENT_H */

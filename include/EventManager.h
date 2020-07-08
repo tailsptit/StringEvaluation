@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_EVENTMANAGER_H
-#define COCCOC_EVENTMANAGER_H
+#ifndef STRINGEVALUATION_EVENTMANAGER_H
+#define STRINGEVALUATION_EVENTMANAGER_H
 
 #include <map>
 #include <mutex>
@@ -40,4 +40,4 @@ private:
     std::map<int, CallBack *> inactiveTasksMap;
 };
 
-#endif  /* COCCOC_EVENTMANAGER_H */
+#endif  /* STRINGEVALUATION_EVENTMANAGER_H */

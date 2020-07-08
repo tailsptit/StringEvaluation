@@ -18,9 +18,7 @@
 - git clone https://github.com/tailsptit/StringEvaluation.git
 #### Build project
 From StringEvaluation path, execute commands
-- mkdir build
-- cd build
-- cmake ..
+- cmake .
 - make  
 
 ## Run

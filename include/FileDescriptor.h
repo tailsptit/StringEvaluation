@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_FILEDESCRIPTOR_H
-#define COCCOC_FILEDESCRIPTOR_H
+#ifndef STRINGEVALUATION_FILEDESCRIPTOR_H
+#define STRINGEVALUATION_FILEDESCRIPTOR_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -31,4 +31,4 @@ protected:
     bool autoClose = true;
 };
 
-#endif  /* COCCOC_FILEDESCRIPTOR_H */
+#endif  /* STRINGEVALUATION_FILEDESCRIPTOR_H */

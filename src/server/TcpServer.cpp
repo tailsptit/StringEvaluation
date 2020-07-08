@@ -7,7 +7,7 @@
 
 #include "../../include/Strings.h"
 #include "../../include/TcpServer.h"
-#include "../../include/Math.h"
+#include "../../include/Evaluation.h"
 #include "../../include/BufferedDataReader.h"
 
 #define BUFFER_SIZE 3
@@ -59,9 +59,9 @@ void TcpServer::handleTcpConnection() {
 }
 
 double processExpression(const string& exp){
-    return Math::evaluate(exp);
-//    string postfix = Math::postfixConversion(exp);
-//    return Math::evaluatePostfix(postfix);
+    return Evaluation::evaluate(exp);
+//    string postfix = Evaluation::postfixConversion(exp);
+//    return Evaluation::evaluatePostfix(postfix);
 }
 
 void TcpServer::handleReadRequest(int fd) {

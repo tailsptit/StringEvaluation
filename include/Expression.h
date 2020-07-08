@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_EXPRESSIONGENERATOR_H
-#define COCCOC_EXPRESSIONGENERATOR_H
+#ifndef STRINGEVALUATION_EXPRESSIONGENERATOR_H
+#define STRINGEVALUATION_EXPRESSIONGENERATOR_H
 
 #include <typeinfo>
 #include <iostream>
@@ -14,22 +14,19 @@
 
 class Expression {
 public:
-    Expression(int min, int max, int len){
-        minNum = min;
-        maxNum = max;
-        length = len;
-
+    Expression(int _maxOperands = 100, bool bracket = true){
+        maxOperands = _maxOperands;
+        allowBrackets = bracket;
         gen = std::mt19937(rd());
-        rnd = std::uniform_int_distribution<>(minNum, maxNum);
+        rnd = std::uniform_int_distribution<>(1, 1000);
     }
     std::string generate();
+    void generateAndSaveFile(std::string file, int numExpression);
     int nextInt();
     bool nextBool();
     static char getOperator(int op);
 private:
-    int length = 10;
-    int minNum = 1;
-    int maxNum = 100;
+    int maxOperands;
     bool allowBrackets = true;
     std::random_device rd;
     std::mt19937 gen;
@@ -37,4 +34,4 @@ private:
 };
 
 
-#endif //COCCOC_EXPRESSIONGENERATOR_H
+#endif //STRINGEVALUATION_EXPRESSIONGENERATOR_H

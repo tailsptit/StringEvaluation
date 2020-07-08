@@ -2,8 +2,8 @@
 // Created by tails on 07/07/2020.
 //
 
-#ifndef COCCOC_EPOLL_H
-#define COCCOC_EPOLL_H
+#ifndef STRINGEVALUATION_EPOLL_H
+#define STRINGEVALUATION_EPOLL_H
 
 #include <sys/epoll.h>
 #include <thread>
@@ -73,4 +73,4 @@ private:
     std::mutex mtx;
 };
 
-#endif //COCCOC_EPOLL_H
+#endif //STRINGEVALUATION_EPOLL_H

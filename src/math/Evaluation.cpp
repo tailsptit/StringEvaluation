@@ -6,13 +6,13 @@
 #include <sstream>
 #include <iostream>
 
-#include "../../include/Math.h"
+#include "../../include/Evaluation.h"
 
-bool Math::isOperator(char c) {
+bool Evaluation::isOperator(char c) {
     return (c == '+') || (c == '-') || (c == '*') || (c == '/');
 }
 
-int Math::getWeight(char op) {
+int Evaluation::getWeight(char op) {
     if ((op == '+') || (op == '-'))
         return 1;
     else if ((op == '*') || (op == '/'))
@@ -20,7 +20,7 @@ int Math::getWeight(char op) {
     return 0;
 }
 
-double Math::applyOp(char op, double a, double b){
+double Evaluation::applyOp(char op, double a, double b){
     switch (op) {
         case '+': return a + b;
         case '-': return a - b;
@@ -30,7 +30,7 @@ double Math::applyOp(char op, double a, double b){
     return 0;
 }
 
-bool Math::hasPriority(char op1, char op2){
+bool Evaluation::hasPriority(char op1, char op2){
     if (op2  == '(' || op2 == ')')
         return false;
     if ((op1  == '*' || op1 == '/') && (op2  == '+' || op2 == '-'))
@@ -41,7 +41,7 @@ bool Math::hasPriority(char op1, char op2){
 ///*
 //  Infix to postfix conversion. Only +, -, *, / operators are expected.
 //*/
-//std::string Math::postfixConversion(std::string exp) {
+//std::string Evaluation::postfixConversion(std::string exp) {
 //    std::string postfix;
 //    Stack<char> stack;     //stack to convert string from infix to postfix
 //    // scan all characters one by one
@@ -87,7 +87,7 @@ bool Math::hasPriority(char op1, char op2){
 //}
 //
 //// evaluatePostfix Postfix exp and return output
-//double Math::evaluatePostfix(std::string exp) {
+//double Evaluation::evaluatePostfix(std::string exp) {
 //    Stack<double> stack;
 //    // scan all characters one by one
 //    for (int i = 0; i < exp.length(); i++) {
@@ -121,7 +121,7 @@ bool Math::hasPriority(char op1, char op2){
 //    return stack.peek();
 //}
 
-double Math::evaluate(const std::string& exp) {
+double Evaluation::evaluate(const std::string& exp) {
     Stack<double> values;
     Stack<char> ops;
     int i;

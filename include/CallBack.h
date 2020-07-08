@@ -1,5 +1,5 @@
-#ifndef COCCOC_CALLBACK_H
-#define COCCOC_CALLBACK_H
+#ifndef STRINGEVALUATION_CALLBACK_H
+#define STRINGEVALUATION_CALLBACK_H
 #include <functional>
 
 class CallBack {
@@ -19,4 +19,4 @@ private:
     std::function<void()> task;
 };
 
-#endif /* COCCOC_CALLBACK_H */
+#endif /* STRINGEVALUATION_CALLBACK_H */

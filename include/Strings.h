@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_STRINGS_H
-#define COCCOC_STRINGS_H
+#ifndef STRINGEVALUATION_STRINGS_H
+#define STRINGEVALUATION_STRINGS_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -283,4 +283,4 @@ public:
 
 };
 
-#endif /* COCCOC_STRINGS_H */
+#endif /* STRINGEVALUATION_STRINGS_H */

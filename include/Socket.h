@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_SOCKET_H
-#define COCCOC_SOCKET_H
+#ifndef STRINGEVALUATION_SOCKET_H
+#define STRINGEVALUATION_SOCKET_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,4 +40,4 @@ private:
     std::string hostname;
 };
 
-#endif  /* COCCOC_SOCKET_H */
+#endif  /* STRINGEVALUATION_SOCKET_H */

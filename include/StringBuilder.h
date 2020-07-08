@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_STRINGBUILDER_H
-#define COCCOC_STRINGBUILDER_H
+#ifndef STRINGEVALUATION_STRINGBUILDER_H
+#define STRINGEVALUATION_STRINGBUILDER_H
 
 #include <string>
 #include "string.h"
@@ -94,4 +94,4 @@ private:
 };
 
 
-#endif /* COCCOC_STRINGBUILDER_H */
+#endif /* STRINGEVALUATION_STRINGBUILDER_H */

@@ -2,47 +2,11 @@
 // Created by tails on 08/07/2020.
 //
 #include<stack>
-#include <fstream>
-#include <iostream>
 #include<string>
-#include <random>
-#include <iostream>
+#include <fstream>
 
+#include "../../include/Expression.h"
 #include "../../include/DataFactory.h"
-
-using namespace std;
-
-void DataFactory::generate(const string &path, const string &file, int n, int range) {
-    ofstream output_file(path + file);
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distOperand(1, range);
-    std::uniform_int_distribution<> distOperator(1, 4);
-
-    output_file << distOperand(gen);
-    for (int i = 2; i <= n; i++) {
-        output_file << getOperator(distOperator(gen));
-        output_file << distOperand(gen);
-    }
-    output_file << "\n";
-    output_file.close();
-}
-
-void DataFactory::generate(const std::string &path, const std::string &file, int n, int range, bool brice) {
-    ofstream output_file(path + file);
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distOperand(1, range);
-    std::uniform_int_distribution<> distOperator(1, 4);
-
-    output_file << distOperand(gen);
-    for (int i = 2; i <= n; i++) {
-        output_file << getOperator(distOperator(gen));
-        output_file << distOperand(gen);
-    }
-    output_file << "\n";
-    output_file.close();
-}
 
 char DataFactory::getOperator(int val){
     switch (val) {
@@ -52,4 +16,24 @@ char DataFactory::getOperator(int val){
         case 4: return '/';
         default: return '+';
     }
+}
+
+void DataFactory::generate(const std::string &file, int numOperands) {
+    std::ofstream output_file(file);
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> distOperand(1, 1000);
+    std::uniform_int_distribution<> distOperator(1, 4);
+    output_file << distOperand(gen);
+    for (int i = 2; i <= numOperands; i++) {
+        output_file << getOperator(distOperator(gen));
+        output_file << distOperand(gen);
+    }
+    output_file << "\n";
+    output_file.close();
+}
+
+void DataFactory::generate(const std::string &file, int maxOperands, int numExpressions, bool allowBracket) {
+    Expression exp(maxOperands, allowBracket);
+    exp.generateAndSaveFile(file, numExpressions);
 }

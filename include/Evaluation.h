@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_MATH_H
-#define COCCOC_MATH_H
+#ifndef STRINGEVALUATION_EVALUATION_H
+#define STRINGEVALUATION_EVALUATION_H
 
 #include<string>
 #include<stack>
@@ -23,9 +23,9 @@ private:
     std::stack<T> _stack;
 };
 
-class Math {
+class Evaluation {
 public:
-    Math(){};
+    Evaluation(){};
     static bool isOperator(char c);
     static int getWeight(char op) ;
     static double applyOp(char op, double a, double b);
@@ -35,4 +35,4 @@ public:
     static double evaluate(const std::string& exp);
 };
 
-#endif //COCCOC_MATH_H
+#endif //STRINGEVALUATION_EVALUATION_H

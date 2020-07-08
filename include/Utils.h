@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_UTILS_H
-#define COCCOC_UTILS_H
+#ifndef STRINGEVALUATION_UTILS_H
+#define STRINGEVALUATION_UTILS_H
 
 class Utils {
 public:
@@ -15,4 +15,4 @@ public:
 
 };
 
-#endif /* COCCOC_UTILS_H */
+#endif /* STRINGEVALUATION_UTILS_H */

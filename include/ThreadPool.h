@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_THREADPOOL_H
-#define COCCOC_THREADPOOL_H
+#ifndef STRINGEVALUATION_THREADPOOL_H
+#define STRINGEVALUATION_THREADPOOL_H
 
 #include <vector>
 #include <queue>
@@ -50,4 +50,4 @@ private:
     unsigned int poolSize;
 };
 
-#endif /* COCCOC_THREADPOOL_H */
+#endif /* STRINGEVALUATION_THREADPOOL_H */

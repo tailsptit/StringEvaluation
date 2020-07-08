@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_MESSAGE_H
-#define COCCOC_MESSAGE_H
+#ifndef STRINGEVALUATION_MESSAGE_H
+#define STRINGEVALUATION_MESSAGE_H
 
 #include <string.h>
 
@@ -66,4 +66,4 @@ private:
     std::vector<int> vec;
 };
 
-#endif //COCCOC_MESSAGE_H
+#endif //STRINGEVALUATION_MESSAGE_H

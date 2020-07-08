@@ -1,5 +1,5 @@
-#ifndef COCCOC_BUFFEREDDATAREADER_H
-#define COCCOC_BUFFEREDDATAREADER_H
+#ifndef STRINGEVALUATION_BUFFEREDDATAREADER_H
+#define STRINGEVALUATION_BUFFEREDDATAREADER_H
 
 #include <iostream>
 #include <string>
@@ -186,4 +186,4 @@ private:
     int dataLen = 0; // effective data lengt
 };
 
-#endif /* COCCOC_BUFFEREDDATAREADER_H */
+#endif /* STRINGEVALUATION_BUFFEREDDATAREADER_H */

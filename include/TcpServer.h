@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_TCPSERVER_H
-#define COCCOC_TCPSERVER_H
+#ifndef STRINGEVALUATION_TCPSERVER_H
+#define STRINGEVALUATION_TCPSERVER_H
 
 #include <map>
 #include <vector>
@@ -32,4 +32,4 @@ private:
     std::mutex mtx;
 };
 
-#endif  /* COCCOC_TCPSERVER_H */
+#endif  /* CSTRINGEVALUATION_TCPSERVER_H */

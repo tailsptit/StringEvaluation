@@ -2,21 +2,19 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_DATAFACTORY_H
-#define COCCOC_DATAFACTORY_H
+#ifndef STRINGEVALUATION_DATAFACTORY_H
+#define STRINGEVALUATION_DATAFACTORY_H
 
 #include <string>
 
 class DataFactory {
 public:
-    DataFactory(){}
-    void generate(const std::string& path, const std::string& file, int n, int range);
-    void generate(const std::string &path, const std::string &file, int n, int range, bool brice);
-    void save();
-
+    DataFactory(){};
     static char getOperator(int val);
+    void generate(const std::string &file, int numOperands);
+    void generate(const std::string &file, int maxOperands, int numExpressions, bool allowBracket);
 
 private:
 };
 
-#endif //COCCOC_DATAFACTORY_H
+#endif //STRINGEVALUATION_DATAFACTORY_H

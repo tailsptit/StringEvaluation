@@ -2,8 +2,8 @@
 // Created by tails on 08/07/2020.
 //
 
-#ifndef COCCOC_EVENT_H
-#define COCCOC_EVENT_H
+#ifndef STRINGEVALUATION_EVENT_H
+#define STRINGEVALUATION_EVENT_H
 
 class Event {
 public:
@@ -15,4 +15,4 @@ private:
     int numEvents;
     const struct epoll_event *events;
 };
-#endif //COCCOC_EVENT_H
+#endif //STRINGEVALUATION_EVENT_H

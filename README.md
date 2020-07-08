@@ -34,6 +34,5 @@ and return to client.
    
    - Example
    nc -w 5 localhost 8081 < /home/tails/Documents/Project/C++/test0.txt
-
  
 ## Technical

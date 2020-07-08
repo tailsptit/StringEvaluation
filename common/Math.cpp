@@ -170,36 +170,32 @@ double Math::evaluate(const std::string& exp) {
     Stack<double> values;
     Stack<char> ops;
 
-    std::string tokens = exp;
-//    char tokens[exp.size() + 1];
-//    std::copy(exp.begin(), exp.end(), tokens);
-
     // scan all characters one by one
-    for (int i = 0; i < exp.length(); ++i) {
+    for (int i = 0; i < exp.length(); i++) {
         // if character is blank space then continue
-        if (isblank(tokens[i] )) continue;
-        if (isdigit(tokens[i])){
+        if (isblank(exp[i])) continue;
+        if (isdigit(exp[i])){
             std::stringbuf buf;
-            while (i < tokens.length() && isdigit(tokens[i]))
-                buf.sputc(tokens[i]);
-            values.push(std::stol(buf.str()));
+            while (i < exp.length() && isdigit(exp[i]))
+                buf.sputc(exp[i++]);
+            values.push(std::stod(buf.str()));
         }
         // if the character is an '(' then push it to stack
-        else if (tokens[i] == '('){
-            ops.push(tokens[i]);
+        else if (exp[i] == '('){
+            ops.push(exp[i]);
         }
         // if the character is an ')', pop and output from the stack util an '(' is encountered
-        else if (tokens[i] == ')'){
+        else if (exp[i] == ')'){
             while (ops.top() != '(')
                 values.push(applyOp(ops.pop(), ops.pop(), values.pop()));
             ops.pop();
         }
         // current tokens is an operator
-        else  if (isOperator(tokens[i])){
-            while (!ops.empty() && hasPriority(tokens[i], ops.top()))
+        else  if (isOperator(exp[i])){
+            while (!ops.empty() && hasPriority(exp[i], ops.top()))
                 values.push(applyOp(ops.pop(), ops.pop(), values.pop()));
             // put current token to ops
-            ops.push(tokens[i]);
+            ops.push(exp[i]);
         }
     }
     // pop all the operators from the stack

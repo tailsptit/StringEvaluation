@@ -49,7 +49,7 @@ std::string Expression::generate() {
 }
 
 int Expression::nextInt() {
-    rnd(gen);
+    return rnd(gen);
 }
 
 bool Expression::nextBool() {

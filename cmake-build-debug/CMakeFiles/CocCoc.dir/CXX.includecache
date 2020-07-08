@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/tails/Documents/Project/C++/CocCoc/common/Math.cpp
-cctype
--
-sstream
--
-../include/Math.h
-/home/tails/Documents/Project/C++/CocCoc/include/Math.h
-
 /home/tails/Documents/Project/C++/CocCoc/common/TcpServer.cpp
 cstdio
 -
@@ -62,10 +54,6 @@ sstream
 
 /home/tails/Documents/Project/C++/CocCoc/include/CallBack.h
 functional
--
-
-/home/tails/Documents/Project/C++/CocCoc/include/DataFactory.h
-string
 -
 
 /home/tails/Documents/Project/C++/CocCoc/include/Epoll.h
@@ -150,22 +138,6 @@ memory
 ../include/StringBuilder.h
 /home/tails/Documents/Project/C++/CocCoc/include/StringBuilder.h
 
-/home/tails/Documents/Project/C++/CocCoc/include/TcpClient.h
-map
--
-mutex
--
-thread
--
-iostream
--
-functional
--
-Socket.h
-/home/tails/Documents/Project/C++/CocCoc/include/Socket.h
-TcpServer.h
-/home/tails/Documents/Project/C++/CocCoc/include/TcpServer.h
-
 /home/tails/Documents/Project/C++/CocCoc/include/TcpServer.h
 map
 -
@@ -205,38 +177,4 @@ CallBack.h
 /home/tails/Documents/Project/C++/CocCoc/include/CallBack.h
 
 /home/tails/Documents/Project/C++/CocCoc/include/Utils.h
-
-/home/tails/Documents/Project/C++/CocCoc/mainServer.cpp
-string
--
-iostream
--
-fstream
--
-algorithm
--
-iostream
--
-vector
--
-chrono
--
-exception
--
-map
--
-include/ThreadPool.h
-/home/tails/Documents/Project/C++/CocCoc/include/ThreadPool.h
-include/CallBack.h
-/home/tails/Documents/Project/C++/CocCoc/include/CallBack.h
-include/Math.h
-/home/tails/Documents/Project/C++/CocCoc/include/Math.h
-include/TcpServer.h
-/home/tails/Documents/Project/C++/CocCoc/include/TcpServer.h
-include/TcpClient.h
-/home/tails/Documents/Project/C++/CocCoc/include/TcpClient.h
-include/CallBack.h
-/home/tails/Documents/Project/C++/CocCoc/include/CallBack.h
-include/DataFactory.h
-/home/tails/Documents/Project/C++/CocCoc/include/DataFactory.h
 

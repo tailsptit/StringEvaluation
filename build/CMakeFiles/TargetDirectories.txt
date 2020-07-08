@@ -1,0 +1,3 @@
+/home/tails/Documents/Project/C++/CocCoc/build/CMakeFiles/rebuild_cache.dir
+/home/tails/Documents/Project/C++/CocCoc/build/CMakeFiles/edit_cache.dir
+/home/tails/Documents/Project/C++/CocCoc/build/CMakeFiles/CocCoc.dir

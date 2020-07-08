@@ -12,6 +12,8 @@
 ## Environment
 - linux
 - gcc 9.3.0
+- cmake 3.16.3
+- make 4.2.1
 
 ## Build
 #### Get source code

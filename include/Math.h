@@ -8,20 +8,31 @@
 #include<string>
 #include<stack>
 
-using namespace std;
+template<typename T>
+class Stack {
+public:
+    void push(T val){ _stack.push(val); }
+    bool empty(){ return _stack.empty(); }
+    T top(){ return _stack.top(); }
+    T pop(){
+        T val = _stack.top();
+        _stack.pop();
+        return val;
+    }
+private:
+    std::stack<T> _stack;
+};
 
 class Math {
-public:
-    stack<char> stackC;     //stack to convert string from infix to postfix
-    stack<double> stackE;   //stack to calculate postfix
-
 public:
     Math(){};
     static bool isOperator(char c);
     static int getWeight(char op) ;
-    string postfixConversion(string exp);
-    double evaluatePostfix(string expression);
-    double evaluate(string exp);
+    static double applyOp(char op, double a, double b);
+    static bool hasPriority(char op1, char op2);
+    static std::string postfixConversion(std::string exp) ;
+    static double evaluatePostfix(std::string exp);
+    static double evaluate(const std::string& exp);
 };
 
 #endif //COCCOC_MATH_H

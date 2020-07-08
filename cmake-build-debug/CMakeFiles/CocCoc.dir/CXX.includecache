@@ -9,6 +9,8 @@
 /home/tails/Documents/Project/C++/CocCoc/common/Math.cpp
 cctype
 -
+sstream
+-
 ../include/Math.h
 /home/tails/Documents/Project/C++/CocCoc/include/Math.h
 

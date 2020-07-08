@@ -58,15 +58,10 @@ void TcpServer::handleTcpConnection() {
     }
 }
 
-double processExpression(const string& expression){
-    cout << "X processExpression = " << expression << std::endl;
-
-    Math math;
-    string postfix = math.postfixConversion(expression);
-//    postfix = "100 200 + 2 / 5 * 7 +" ;
-    double val = math.evaluatePostfix(postfix);
-    std::cout << postfix << " = " << val << std::endl;
-    return val;
+double processExpression(const string& exp){
+    return Math::evaluate(exp);
+//    string postfix = Math::postfixConversion(exp);
+//    return Math::evaluatePostfix(postfix);
 }
 
 void TcpServer::handleReadRequest(int fd) {

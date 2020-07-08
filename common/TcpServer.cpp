@@ -82,15 +82,14 @@ void TcpServer::handleReadRequest(int fd) {
 
     // Try to parse header line "getSize = value\n" to getNumEvents data length;
     int nread = 0;
-    std::cout << "message->getState() = " << message->getState() << std::endl;
     string s = "";
     if (message->getState() == Message::INIT) {
         char c;
         while ((nread = br.read(&c)) > 0) {
             if (c == '\n'){
-                std::cout << s << " = " << s << std::endl;
+                std::cout << "\n\nINPUT: " << s << "        = " << s << std::endl;
                 double res = processExpression(s);
-                std::cout << s << " = " << res << std::endl;
+                std::cout << "OUTPUT: " << s << "       = " << res << std::endl;
                 s = "";
                 continue;
             } else {

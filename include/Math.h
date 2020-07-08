@@ -13,7 +13,7 @@ class Stack {
 public:
     void push(T val){ _stack.push(val); }
     bool empty(){ return _stack.empty(); }
-    T top(){ return _stack.top(); }
+    T peek(){ return _stack.top(); }
     T pop(){
         T val = _stack.top();
         _stack.pop();
@@ -30,8 +30,8 @@ public:
     static int getWeight(char op) ;
     static double applyOp(char op, double a, double b);
     static bool hasPriority(char op1, char op2);
-    static std::string postfixConversion(std::string exp) ;
-    static double evaluatePostfix(std::string exp);
+//    static std::string postfixConversion(std::string exp) ;
+//    static double evaluatePostfix(std::string exp);
     static double evaluate(const std::string& exp);
 };
 

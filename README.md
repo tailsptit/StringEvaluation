@@ -1,5 +1,8 @@
 # StringEvaluation
-- Program is designed for evaluating value of an expression
+- Program is designed for evaluating value of an expression, using client-server model.
+- Client sends string expression using TCP. 
+- Server accepts & evaluates expression and return value to client
+  
 
 ## Introduction
 - Server receive string expression from client, evaluate expression 

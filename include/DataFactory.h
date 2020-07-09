@@ -13,6 +13,8 @@ public:
     static char getOperator(int val);
     void generate(const std::string &file, int numOperands);
     void generate(const std::string &file, int maxOperands, int numExpressions, bool allowBracket);
+    std::string generate(int maxOperands, int numExpressions, bool allowBracket);
+
 
 private:
 };

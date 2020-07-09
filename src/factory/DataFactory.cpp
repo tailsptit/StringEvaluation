@@ -35,5 +35,10 @@ void DataFactory::generate(const std::string &file, int numOperands) {
 
 void DataFactory::generate(const std::string &file, int maxOperands, int numExpressions, bool allowBracket) {
     Expression exp(maxOperands, allowBracket);
-    exp.generateAndSaveFile(file, numExpressions);
+    exp.generate(file, numExpressions);
+}
+
+std::string DataFactory::generate(int maxOperands, int numExpressions, bool allowBracket) {
+    Expression exp(maxOperands, allowBracket);
+    return exp.generate(numExpressions);
 }

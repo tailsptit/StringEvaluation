@@ -20,11 +20,12 @@ public:
         gen = std::mt19937(rd());
         rnd = std::uniform_int_distribution<>(1, 1000);
     }
-    std::string generate();
-    void generateAndSaveFile(std::string file, int numExpression);
+    std::string generate(int numExpression);
+    void generate(std::string file, int numExpression);
     int nextInt();
     bool nextBool();
     static char getOperator(int op);
+
 private:
     int maxOperands;
     bool allowBrackets = true;

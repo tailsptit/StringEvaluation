@@ -40,8 +40,8 @@ public:
     int port = 8081;
     int run_mode = 2; //default start server
     int poolSize = 7;
-    string file;
-    int maxOperands = 20;
+    string file = "";
+    int maxOperands = 10;
     int numExpressions = 1;
     bool allowBracket = true;
 };
@@ -53,8 +53,14 @@ int main(int argc, char **argv) {
 
     if (opt.run_mode == 1) {
         std::cout << "Generating data. No start server" << std::endl;
-        DataFactory dataFactory;
-        dataFactory.generate(opt.file, opt.maxOperands, opt.numExpressions, opt.allowBracket);
+        DataFactory factory;
+        if (opt.file.compare("") == 0){
+            std::string result = factory.generate(opt.maxOperands, opt.numExpressions, opt.allowBracket);
+            std::cout << "OUTPUT\n" << result << std::endl;
+        } else {
+            factory.generate(opt.file, opt.maxOperands, opt.numExpressions, opt.allowBracket);
+        }
+
     } else if (opt.run_mode == 2) {
         std::cout << "Start server" << std::endl;
         TcpServer server(opt.port, opt.poolSize);

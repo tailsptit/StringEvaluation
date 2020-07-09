@@ -78,7 +78,6 @@ void TcpServer::handleReadRequest(int fd) {
     // Create a buffered data reader on the socket.
     std::unique_ptr<FileDescriptor> upClientSocket(new Socket(fd, false));
     BufferedDataReader br(std::move(upClientSocket));
-    std::cout << "Create a buffered data reader on the socket" << std::endl;
 
     // Try to parse header line "getSize = value\n" to get data length;
     int nread = 0;
@@ -87,54 +86,21 @@ void TcpServer::handleReadRequest(int fd) {
         char c;
         while ((nread = br.read(&c)) > 0) {
             if (c == '\n'){
-                std::cout << "\n\nINPUT: " << s << "        = " << s << std::endl;
                 double res = processExpression(s);
-                std::cout << "OUTPUT: " << s << "       = " << res << std::endl;
+                std::cout << "OUTPUT = " << res << std::endl;
                 s = "";
                 continue;
             } else if (c != ' '){
                 s += c;
             }
-
-//            std::cout << "nread = " << nread << std::endl;
-//            std::cout << "c = " << c << std::endl;
-//
-//            message->writeToBuffer(&c, 1);
-//            if (c == '\n') {
-//                std::cout << "c == '\\n'" << std::endl;
-//
-//                std::string line(message->charBuffer(), message->received_size());
-//                std::cout << "line = " << line << std::endl;
-//
-//                std::vector<std::string> result = Strings::splitGreedy(line, '\n');
-//                if (result.size() != 2) {
-//                    std::cout << "Message::ERROR = " << Message::ERROR << std::endl;
-//                    message->setState(Message::ERROR);
-//                    return;
-//                }
-//                try {
-////                    int data_length = std::stoi(Strings::strip(result[1]));
-//                    int data_length = std::stoi(line);
-//
-//                    message->resetBuffer(data_length);
-//                    std::cout << "data lengh = " << data_length << std::endl;
-//                    message->setState(Message::READING);
-//                }
-//                catch (std::exception &err) {
-////                    fprintf(stderr, "Can't parse \"%s\" as int32 value",
-////                            result[1].c_str());
-//                    message->setState(Message::ERROR);
-//                    return;
-//                }
-//                break;
-//            }
         }
-        if (nread == 0 || (errno != EAGAIN && errno != 0)) {
-            removeSession(fd);
-            return;
-        }
+//        if (nread == 0 || (errno != EAGAIN && errno != 0)) {
+//            removeSession(fd);
+//            return;
+//        }
     }
-    message->setState(Message::READING);
+    std::cout << "Execute expression" << std::endl;
+//    message->setState(Message::FINISH_READING);
     // Begin reading message data.
     if (message->getState() == Message::READING) {
         char buf[BUFFER_SIZE];
@@ -183,9 +149,15 @@ void TcpServer::handleWriteRequest(int fd) {
         }
         message = mapMessages[fd];
     }
+    char *buf = new char[4] ;
+    char c = (char) 100;
+    memcpy(buf, &c, 4);
+    int nwrite = write(fd, buf,4);
+    std::cout << "Send back client: SIZE " << nwrite << std::endl;
+    std::cout << "Data " << int(*buf) << std::endl;
 
-    int nwrite = write(fd, message->charBuffer() + message->getWrittenSize(),
-                       message->received_size() - message->getWrittenSize());
+//    int nwrite = write(fd, message->charBuffer() + message->getWrittenSize(),
+//                       message->received_size() - message->getWrittenSize());
     if (nwrite < 0) {
         removeSession(fd);
     }

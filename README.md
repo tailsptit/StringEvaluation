@@ -57,6 +57,7 @@
             - flag -num-expression: number of expressions will be generated
             - flag -max-num-operand: maximum of operands in each expression
 ###### Example
+    ./StringEvaluation -run-mode 3 -port 8081 -pool-size 5 -num-expression 2 -max-num-operand 20
     ./StringEvaluation -run-mode 3 -port 8081 -pool-size 5 -num-expression 3 -max-num-operand 20 -file "home/tails/Documents/Project/C++/test0.txt" 
 
 #### Run client

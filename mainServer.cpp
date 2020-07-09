@@ -60,15 +60,19 @@ int main(int argc, char **argv) {
         } else {
             factory.generate(opt.file, opt.maxOperands, opt.numExpressions, opt.allowBracket);
         }
-
     } else if (opt.run_mode == 2) {
         std::cout << "Start server" << std::endl;
         TcpServer server(opt.port, opt.poolSize);
         server.start();
     } else if (opt.run_mode == 3) {
         std::cout << "Generating data & Start server" << std::endl;
-        DataFactory dataFactory;
-        dataFactory.generate(opt.file, opt.maxOperands, opt.numExpressions, opt.allowBracket);
+        DataFactory factory;
+        if (opt.file.compare("") == 0){
+            std::string result = factory.generate(opt.maxOperands, opt.numExpressions, opt.allowBracket);
+            std::cout << "OUTPUT\n" << result << std::endl;
+        } else {
+            factory.generate(opt.file, opt.maxOperands, opt.numExpressions, opt.allowBracket);
+        }
         TcpServer server(opt.port, opt.poolSize);
         server.start();
     } else {

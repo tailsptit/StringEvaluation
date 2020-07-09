@@ -10,7 +10,7 @@
 #include "../../include/Evaluation.h"
 #include "../../include/BufferedDataReader.h"
 
-#define BUFFER_SIZE 3
+#define BUFSIZE 256
 
 TcpServer::TcpServer(int port, int poolSize) : eventManger(poolSize) {
     std::cout << "Create server socket a port " << port << std::endl;
@@ -71,7 +71,7 @@ void TcpServer::handleReadRequest(int fd) {
     {
         std::unique_lock<std::mutex> lock(mtx);
         if (mapMessages.find(fd) == mapMessages.end()) {
-            mapMessages[fd] = new Message(32);
+            mapMessages[fd] = new Message(64);
         }
         message = mapMessages[fd];
     }
@@ -82,53 +82,75 @@ void TcpServer::handleReadRequest(int fd) {
 
     // Try to parse header line "getSize = value\n" to get data length;
     int nread = 0;
-    string s = "";
+    "";
     std::cout << "message->getState() " << message->getState()  << std::endl;
 
-    if (message->getState() == Message::INIT) {
-        char c;
-        while ((nread = br.read(&c)) > 0) {
-            if (c == '\n') {
-                double res = processExpression(s);
-                std::cout << "OUTPUT = " << res << std::endl;
-                s = "";
-                message->setState(Message::FINISH_READING);
-//                continue;
-            } else if (c != ' ') {
-                s += c;
-            }
-        }
-//        if (nread == 0 || (errno != EAGAIN && errno != 0)) {
-//            removeSession(fd);
-//            return;
+//    if (message->getState() == Message::INIT) {
+//        char c;
+//        while ((nread = br.read(&c)) > 0) {
+//            if (c == '\n') {
+//                double res = processExpression(s);
+//                std::cout << "OUTPUT = " << res << std::endl;
+//                s = "";
+//                message->setState(Message::FINISH_READING);
+////                continue;
+//            } else if (c != ' ') {
+//                s += c;
+//            }
 //        }
-    }
+////        if (nread == 0 || (errno != EAGAIN && errno != 0)) {
+////            removeSession(fd);
+////            return;
+////        }
+//    }
+
+
     std::cout << "Execute expression" << std::endl;
 //    message->setState(Message::FINISH_READING);
     // Begin reading message data.
-    if (message->getState() == Message::READING) {
-        char buf[BUFFER_SIZE];
-        int read_th = 0;
-        while ((nread = br.read(buf, 0, BUFFER_SIZE)) > 0) {
-            read_th++;
-            std::cout << "read_th = " << read_th << std::endl;
+    if (message->getState() == Message::READING || message->getState() == Message::INIT) {
+        char buf[BUFSIZE];
+        char c;
+        std::string s = "";
+        while ((nread = br.read(&c)) > 0) {
+            std::cout << "read " << c << std::endl;
+            if (c == '\n') {
+                std::cout << "s =====" << s << std::endl;
 
-            std::cout << "nread " << nread << std::endl;
-            std::cout << "buf =  " << buf << std::endl;
-            std::cout << "sizeof(buf)  =  " << sizeof(buf) << std::endl;
+//            if (message->isFull() || (c == '\n')) {
+                std::cout << "message->isFull() = " << message->isFull() << std::endl;
+                std::cout << "c == '\\n' = " << (c == '\n') << std::endl;
 
-            message->writeToBuffer(buf, nread);
-            if (message->isFull()) {
+                if (s.empty()) {
+                    std::cout << "EMPTY" << std::endl;
+                    message->setState(Message::READING);
+                    break;
+                    std::cout << "AF""  EMPTY" << std::endl;
+                }
+                double result = processExpression(s);
+                std::cout << "result TMP = " << result << std::endl;
+                std::string abc = std::to_string(result);
+                int len = abc.size();
+                char* writeData = new char[len+1];
+                std::copy(abc.begin(), abc.end(), writeData);
+                writeData[len] = '\0';
+
+                message->resetBuffer(len+1);
+                message->writeToBuffer(writeData, len+1);
                 message->setState(Message::FINISH_READING);
+                s = "";
                 break;
+            } else if (c != ' '){
+                s+=c;
             }
         }
         // Unexpected EOF or errno other than EAGAIN.
         if ((nread == 0 && !message->isFull()) || (errno != EAGAIN && errno != 0)) {
-            removeSession(fd);
-            return;
+//            removeSession(fd);
+//            return;
         }
     }
+    std::cout << "Execute expression" << std::endl;
 
     // Check message status and submit new handlers to event manager.
     if (message->getState() == Message::INIT || message->getState() == Message::READING) {
@@ -154,30 +176,42 @@ void TcpServer::handleWriteRequest(int fd) {
         message = mapMessages[fd];
     }
 
-    char *buf = new char[4];
-    char c = (char) 100;
-    memcpy(buf, &c, 4);
-    int nwrite = write(fd, buf, 4);
-    std::cout << "Send back client: FD " << fd << std::endl;
-    std::cout << "Data " << int(*buf) << std::endl;
-
-//    int nwrite = write(fd, message->charBuffer() + message->getWrittenSize(),
-//                       message->received_size() - message->getWrittenSize());
+//    char *buf = new char[4];
+//    char c = (char) 100;
+//    memcpy(buf, &c, 4);
+//    int nwrite = write(fd, buf, 4);
+//    std::cout << "Send back client: FD " << fd << std::endl;
+//    std::cout << "Data " << int(*buf) << std::endl;
+//    char *buff = message->charBuffer();
+//    std::cout << "size of write = " << std::endl;
+//
+//    int nwrite = write(fd, buff, 8);
+//    std::cout << "nwrite = " << nwrite << std::endl;
+//    std::cout << "*buff = " << *buff << std::endl;
+//
+    int nwrite = write(fd, message->charBuffer() + message->getWrittenSize(),
+                       message->received_size() - message->getWrittenSize());
     if (nwrite < 0) {
         removeSession(fd);
     }
     message->addWrittenSize(nwrite);
 
     if (message->getWrittenSize() == message->received_size()) {
-        // finish writing, closeFd this session.
-        removeSession(fd);
+        std::cout <<  "finish writing, closeFd this session" << std::endl;
+//        removeSession(fd);
+        message->setState(Message::READING);
+        eventManger.modifyTaskWaitingStatus(fd, EPOLLIN | EPOLLONESHOT,
+                                            new CallBack(&TcpServer::handleReadRequest, this, fd));
     } else {
         // message->addWrittenSize(nwrite);
         if (message->getState() == Message::FINISH_READING && nwrite > 0) {
-            message->setState(Message::WRITING);
+//            message->setState(Message::WRITING);
+            message->setState(Message::READING);
         }
-        eventManger.modifyTaskWaitingStatus(fd, EPOLLOUT | EPOLLONESHOT,
-                                            new CallBack(&TcpServer::handleWriteRequest, this, fd));
+//        eventManger.modifyTaskWaitingStatus(fd, EPOLLOUT | EPOLLONESHOT,
+//                                            new CallBack(&TcpServer::handleWriteRequest, this, fd));
+        eventManger.modifyTaskWaitingStatus(fd, EPOLLIN | EPOLLONESHOT,
+                                            new CallBack(&TcpServer::handleReadRequest, this, fd));
     }
 }
 

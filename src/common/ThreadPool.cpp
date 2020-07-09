@@ -40,10 +40,7 @@ void ThreadPool::start() {
 // Thread worker
 void ThreadPool::startWorker() {
     CallBack *task;
-    std::cout << "ThreadPool::startWorker" << std::endl;
-    int dem = 0;
     while (true) {
-        std::cout << "dem = " << ++dem << std::endl;
         {
             std::unique_lock<std::mutex> lock(queueMutex);
             condition.wait(lock, [this] { return state == STOP || !pQueueTasks.empty(); });

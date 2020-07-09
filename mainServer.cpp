@@ -47,6 +47,8 @@ public:
 };
 
 int main(int argc, char **argv) {
+    double d = 10;
+    std::cout << "sizeof(d) = " << sizeof(d) << std::endl;
     std::cout << "argc = " << argc << std::endl;
     std::cout << "**argv = " << **argv << std::endl;
     Opt opt(argc, argv);

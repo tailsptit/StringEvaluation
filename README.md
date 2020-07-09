@@ -109,5 +109,5 @@ EventManager is an IO event-driven thread pool. The difference with a regular th
 ##### Remove a awaiting task from event manager:
     event_manager.removeAwaitingTask(fd);
 
-An TCP server example is provided which uses EventManager for multi-task handling. Server side is purely non-block socket programmed and uses state machine to maintain status of each connection. A simple client sends concurrent requests for load testing.
+An TCP server is provided which uses EventManager for multi-task handling. Server side is purely non-block socket programmed and uses state machine to maintain status of each connection. A simple client sends concurrent requests for load testing.
     

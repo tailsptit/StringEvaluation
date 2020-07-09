@@ -60,8 +60,8 @@ int main(int argc, char **argv) {
         } else {
             factory.generate(opt.file, opt.maxOperands, opt.numExpressions, opt.allowBracket);
         }
-    } else if (opt.run_mode == 2) {
-        std::cout << "Start server" << std::endl;
+    } else if (opt.run_mode == 2 || argc < 2) {
+        std::cout << "Start server only" << std::endl;
         TcpServer server(opt.port, opt.poolSize);
         server.start();
     } else if (opt.run_mode == 3) {
@@ -69,7 +69,7 @@ int main(int argc, char **argv) {
         DataFactory factory;
         if (opt.file.compare("") == 0){
             std::string result = factory.generate(opt.maxOperands, opt.numExpressions, opt.allowBracket);
-            std::cout << "OUTPUT\n" << result << std::endl;
+            std::cout << "GEN OUTPUT DATA\n" << result << std::endl;
         } else {
             factory.generate(opt.file, opt.maxOperands, opt.numExpressions, opt.allowBracket);
         }

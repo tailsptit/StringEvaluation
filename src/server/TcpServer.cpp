@@ -13,7 +13,7 @@
 #define BUFFER_SIZE 3
 
 TcpServer::TcpServer(int port, int poolSize) : eventManger(poolSize) {
-    std::cout<< "Create server socket a port " << port << std::endl;
+    std::cout << "Create server socket a port " << port << std::endl;
     listenSocket.reset(Socket::createServerSocket(port, true));
 }
 
@@ -49,7 +49,8 @@ void TcpServer::handleTcpConnection() {
             std::cerr << "ERORR: Accept connection failed" << std::endl;
             continue;
         }
-        std::cout << "Accept new connection from " << inet_ntoa(client_addr.sin_addr) << ":" << ntohs(client_addr.sin_port) << std::endl;
+        std::cout << "Accept new connection from " << inet_ntoa(client_addr.sin_addr) << ":"
+                  << ntohs(client_addr.sin_port) << std::endl;
         std::cout << "Total connection: " << ++num << std::endl;
         // TOOD: Submit it to event manager.
         eventManger.addTaskWaitingReadable(accept_fd, new CallBack(&TcpServer::handleReadRequest, this, accept_fd));
@@ -58,7 +59,7 @@ void TcpServer::handleTcpConnection() {
     }
 }
 
-double processExpression(const string& exp){
+double processExpression(const string &exp) {
     return Evaluation::evaluate(exp);
 //    string postfix = Evaluation::postfixConversion(exp);
 //    return Evaluation::evaluatePostfix(postfix);
@@ -82,15 +83,18 @@ void TcpServer::handleReadRequest(int fd) {
     // Try to parse header line "getSize = value\n" to get data length;
     int nread = 0;
     string s = "";
+    std::cout << "message->getState() " << message->getState()  << std::endl;
+
     if (message->getState() == Message::INIT) {
         char c;
         while ((nread = br.read(&c)) > 0) {
-            if (c == '\n'){
+            if (c == '\n') {
                 double res = processExpression(s);
                 std::cout << "OUTPUT = " << res << std::endl;
                 s = "";
-                continue;
-            } else if (c != ' '){
+                message->setState(Message::FINISH_READING);
+//                continue;
+            } else if (c != ' ') {
                 s += c;
             }
         }
@@ -149,11 +153,12 @@ void TcpServer::handleWriteRequest(int fd) {
         }
         message = mapMessages[fd];
     }
-    char *buf = new char[4] ;
+
+    char *buf = new char[4];
     char c = (char) 100;
     memcpy(buf, &c, 4);
-    int nwrite = write(fd, buf,4);
-    std::cout << "Send back client: SIZE " << nwrite << std::endl;
+    int nwrite = write(fd, buf, 4);
+    std::cout << "Send back client: FD " << fd << std::endl;
     std::cout << "Data " << int(*buf) << std::endl;
 
 //    int nwrite = write(fd, message->charBuffer() + message->getWrittenSize(),
@@ -171,7 +176,8 @@ void TcpServer::handleWriteRequest(int fd) {
         if (message->getState() == Message::FINISH_READING && nwrite > 0) {
             message->setState(Message::WRITING);
         }
-        eventManger.modifyTaskWaitingStatus(fd, EPOLLOUT | EPOLLONESHOT,new CallBack(&TcpServer::handleWriteRequest, this, fd));
+        eventManger.modifyTaskWaitingStatus(fd, EPOLLOUT | EPOLLONESHOT,
+                                            new CallBack(&TcpServer::handleWriteRequest, this, fd));
     }
 }
 

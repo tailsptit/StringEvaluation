@@ -21,44 +21,31 @@
     cmake .
     make
 
-## Run
-#### Generate data only (not start server)
-###### Generate data and print result to terminal, run command
-    ./StringEvaluation -run-mode 1 -num-expression A -max-num-operand B 
-                
-        -num-expression flag: number of expressions will be generated
-        -max-num-operand flag: maximum of operands in each expression
-        
-###### Generate data and save to file, run command
-    ./StringEvaluation -run-mode 1 -num-expression A -max-num-operand B -file FILE 
-        
-        -num-expression flag: number of expressions will be generated
-        -max-num-operand flag: maximum of operands in each expression
-        -file flag: file path
-###### Example
-    ./StringEvaluation -run-mode 1 -num-expression 1 -max-num-operand 10
-    ./StringEvaluation -run-mode 1 -num-expression 4 -max-num-operand 20 -file "/home/tails/Documents/Project/C++/test0.txt" 
-
-#### Start server only (not gen data)
+#### Run
 ###### From StringEvaluation project path, run command
-    ./StringEvaluation -run-mode 2 -port PORT -pool-size POOSIZE
+    ./StringEvaluation -port PORT -pool-size SIZE
             
-            - flag -port: server tcp port
-            - flag --pool-size: number of threads      
+            -port: server tcp port. Default PORT = 8081
+            -pool-size: number of threads. Default SIZE = 7       
 ###### Example
-    ./StringEvaluation -run-mode 2 -port 8081 -pool-size 5
-#### Generating data & start server
+    ./StringEvaluation -port 8081 -pool-size 5
+    
+#### Generate data
 ###### From StringEvaluation project path, run command
-    ./StringEvaluation -run-mode 3 -port PORT -pool-size POOSIZE -num-expression A -max-num-operand B -file FILE  
-            
-            - flag -port: server tcp port
-            - flag --pool-size: number of threads  
-            - flag -file: file path
-            - flag -num-expression: number of expressions will be generated
-            - flag -max-num-operand: maximum of operands in each expression
+    ./StringEvaluation -gen-data GEN -num-expression NUM_EXPS -num-operand NUM_OPS -min-operand MIN_OPS -max-operand MAX_OPS -allow-bracket BRACKET -operator OPS -file FILE  
+        
+    Parameter is optional
+        -gen-data: generating data. Default GEN=true
+        -num-expression: number of expressions will be generated. Default NUM_EXPS = 1
+        -num-operand: numer of operands in expression. Default NUM_OPS = 10
+        -min-operand: minimum of operand. Default MIN_OPS = 0. Should be positive
+        -max-operand: maximum of operand. Default MAX_OPS = 1000. Should be greater than MIN_OPS 
+        -allow-bracket: allow bracket in expression or not. Default BRACKET = true
+        -operator: allow operators in expression, it is subset of [+, -, *, /]. Default OPS = +-*/
+        -file: absolute filename
 ###### Example
-    ./StringEvaluation -run-mode 3 -port 8081 -pool-size 5 -num-expression 2 -max-num-operand 20
-    ./StringEvaluation -run-mode 3 -port 8081 -pool-size 5 -num-expression 3 -max-num-operand 20 -file "home/tails/Documents/Project/C++/test0.txt" 
+    ./StringEvaluation -gen-data true -num-expression 1 -num-operand 20 -min-operand 0 -max-operand 2000 -allow-bracket true -operator +-
+    ./StringEvaluation -gen-data true -num-expression 1 -num-operand 20 -min-operand 0 -max-operand 2000 -allow-bracket true -operator +- -file "/home/tails/Documents/Project/C++/test0.txt"  
 
 #### Run client
 ###### Send data by typing, run command
@@ -78,36 +65,38 @@
  
 ## Technical
 
-#### ThreadPool - Basic thread pooling functionality.
-See a tiny example in main.cpp.
-
+#### ThreadPool
 ##### Create a thread pool:
-    ThreadPool pool(size);
+    ThreadPool threadPool(size);
 
-##### Submit a task to thread pool:
+##### Submit a task to the thread pool
     pool.addTask(new CallBack(func, args...));
 
-##### Stop the thread pool and wait for all tasks to finish:
+##### Stop the thread pool
     pool.stop();
     pool.awaitTermination();
 
-#### EventManager - An event-driven thread pool.
-EventManager is an IO event-driven thread pool. The difference with a regular thread pool is that it listens to IO descriptors with epolling in a seperate thread. The epolling thread would submit IO-ready tasks to its internal thread pool. EventManager utilizes epoll(4) and supports non-blocking IO. 
+#### EventManager
+    EventManager is an IO event-driven thread pool, support non-blocking IO 
+    The difference with ThreadPool is that it listens to IO descriptors with epolling in a seperate thread. 
+    The epolling thread would submit IO-ready tasks to its internal ThreadPool. 
 
 ##### Create an EventManager:
-    EventManager event_manager(thread_pool_size);
+    EventManager eventManager(threadPoolSize);
 
 ##### Submit a task without IO monitoring same as a regular FixedThreadPool:
-    event_manager.addTask(new CallBack(func, args...));
+    eventManager.addTask(new CallBack(func, args...));
 
 ##### Submit a task waiting for IO to be readable:
-    event_manager.addTaskWaitingReadable(fd, new CallBack(&func, args...);
+    eventManager.addTaskWaitingReadable(fd, new CallBack(&func, args...);
 
 ##### Submit a task waiting for IO to be writable:
-    event_manager.AddTaskWaitingWritable(fd, new CallBack(&func, args...);
+    eventManager.addTaskWaitingWritable(fd, new CallBack(&func, args...);
 
 ##### Remove a awaiting task from event manager:
-    event_manager.removeAwaitingTask(fd);
+    eventManager.removeAwaitingTask(fd);
 
-An TCP server is provided which uses EventManager for multi-task handling. Server side is purely non-block socket programmed and uses state machine to maintain status of each connection. A simple client sends concurrent requests for load testing.
+#### TCP Server
+    An TCP server using EventManager for multi-task handling. 
+    Server is non-block socket and use state machine to maintain status of each connection
     

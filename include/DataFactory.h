@@ -10,10 +10,10 @@
 class DataFactory {
 public:
     DataFactory(){};
-    static char getOperator(int val);
+    char getOperator(int val);
     void generate(const std::string &file, int numOperands);
-    void generate(const std::string &file, int maxOperands, int numExpressions, bool allowBracket);
-    std::string generate(int maxOperands, int numExpressions, bool allowBracket);
+    std::string generate(int numExpressions, int numOperands, int maxOperand, int minOperand, bool allowBracket, char ops[]);
+    void generate(const std::string &file, int numExpressions, int numOperands, int maxOperand, int minOperand, bool allowBracket, char ops[]);
 
 
 private:

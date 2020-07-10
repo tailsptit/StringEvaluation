@@ -8,35 +8,28 @@
 
 std::string Expression::generate(int numExpression) {
     std::stringstream buffer;
-    for (int n = 0; n < numExpression; n++) {
-        int numberOfOperandsInExpression = 1 + nextInt() % maxOperands;
-
+    for (int expId = 0; expId < numExpression; expId++) {
         // generates and appends the first number to file
         buffer << nextInt();
         int brackets = 0;
-        for (int i = 0; i < numberOfOperandsInExpression; i++) {
-            // Generates random number
+        for (int i = 0; i < numOperands; i++) {
             int number = nextInt();
-
             // Generates random operator and append
-            char op = getOperator(nextInt() % 4);
+            char op = ops[nextInt() % 4];
             if (op == '/' && number == 0) {
                 i--;
                 continue;
             }
-            buffer << " " << op << " ";
+            buffer << op;
 
             // Creates a bracket
             bool inBrackets = false;
-            if (nextBool() && i != numberOfOperandsInExpression - 1 && allowBrackets) {
+            if (nextBool() && i != numOperands - 1 && allowBrackets) {
                 buffer << "(";
                 inBrackets = true;
                 brackets++;
             }
-
-            // Appends the generated number
             buffer << number;
-
             // Ends a bracket if exists
             if (brackets > 0 && !inBrackets && nextBool()) {
                 buffer << ")";
@@ -49,33 +42,30 @@ std::string Expression::generate(int numExpression) {
         }
         buffer << '\n';
     }
-//    std::cout << "xxxxxxx = "<< buffer.str() << std:: endl;
     return buffer.str();
 }
 
-void Expression::generate(std::string file, int numExpression) {
+void Expression::generate(const std::string& file, int numExpression) {
     std::ofstream buffer(file);
-    for (int n = 0; n < numExpression; n++) {
-        int numberOfOperandsInExpression = 1 + nextInt() % maxOperands;
-
+    for (int expId = 0; expId < numExpression; expId++) {
         // generates and appends the first number to file
         buffer << nextInt();
         int brackets = 0;
-        for (int i = 0; i < numberOfOperandsInExpression; i++) {
+        for (int i = 0; i < numOperands; i++) {
             // Generates random number
             int number = nextInt();
 
             // Generates random operator and append
-            char op = getOperator(nextInt() % 4);
+            char op = ops[nextInt() % 4];
             if (op == '/' && number == 0) {
                 i--;
                 continue;
             }
-            buffer << " " << op << " ";
+            buffer << op;
 
             // Creates a bracket
             bool inBrackets = false;
-            if (nextBool() && i != numberOfOperandsInExpression - 1 && allowBrackets) {
+            if (nextBool() && i != numOperands - 1 && allowBrackets) {
                 buffer << "(";
                 inBrackets = true;
                 brackets++;
@@ -105,19 +95,4 @@ int Expression::nextInt() {
 
 bool Expression::nextBool() {
     return rnd(gen) % 2 == 1;
-}
-
-char Expression::getOperator(int op) {
-    switch (op) {
-        case 0:
-            return '+';
-        case 1:
-            return '-';
-        case 2:
-            return '*';
-        case 3:
-            return '/';
-        default:
-            return '+';
-    }
 }

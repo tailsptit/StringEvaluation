@@ -16,4 +16,4 @@ add_executable(StringEvaluation
         src/server/TcpServer.cpp
         src/factory/DataFactory.cpp
         mainServer.cpp
-)
+        include/Opt.h)

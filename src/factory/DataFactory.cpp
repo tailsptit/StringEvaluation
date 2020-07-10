@@ -33,12 +33,13 @@ void DataFactory::generate(const std::string &file, int numOperands) {
     output_file.close();
 }
 
-void DataFactory::generate(const std::string &file, int maxOperands, int numExpressions, bool allowBracket) {
-    Expression exp(maxOperands, allowBracket);
+std::string DataFactory::generate(int numExpressions, int numOperands, int maxOperand, int minOperand, bool allowBracket, char ops[]) {
+    Expression  exp(numOperands, maxOperand, minOperand, allowBracket, ops);
+    return exp.generate(numExpressions);
+}
+
+void DataFactory::generate(const std::string &file, int numExpressions, int numOperands, int maxOperand, int minOperand, bool allowBracket, char ops[]) {
+    Expression  exp(numOperands, maxOperand, minOperand, allowBracket, ops);
     exp.generate(file, numExpressions);
 }
 
-std::string DataFactory::generate(int maxOperands, int numExpressions, bool allowBracket) {
-    Expression exp(maxOperands, allowBracket);
-    return exp.generate(numExpressions);
-}

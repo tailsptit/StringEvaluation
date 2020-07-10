@@ -3,6 +3,7 @@
 //
 #include <string>
 #include <iostream>
+#include <Opt.h>
 
 #include "include/ThreadPool.h"
 #include "include/CallBack.h"
@@ -12,72 +13,21 @@
 
 using namespace std;
 
-class Opt {
-public:
-    Opt(int argc, char **argv) {
-        if (argc > 1) {
-            for (int i = 1; i < argc; i = i + 2) {
-                std::string tag(argv[i]);
-                if (tag.compare("-run-mode") == 0) {
-                    run_mode = std::stoi(std::string(argv[i + 1]));
-                } else if (tag.compare("-port") == 0) {
-                    port = std::stoi(std::string(argv[i + 1]));
-                } else if (tag.compare("-file") == 0) {
-                    string val(argv[i + 1]);
-                    file = val;
-                } else if (tag.compare("-pool-size") == 0) {
-                    poolSize = std::stoi(std::string(argv[i + 1]));
-                } else if (tag.compare("-num-expression") == 0) {
-                    numExpressions = std::stoi(std::string(argv[i + 1]));
-                } else if (tag.compare("-max-num-operand") == 0) {
-                    maxOperands = std::stoi(std::string(argv[i + 1]));
-                }
-            }
-        }
-    }
-
-public:
-    int port = 8081;
-    int run_mode = 2; //default start server
-    int poolSize = 7;
-    string file = "";
-    int maxOperands = 10;
-    int numExpressions = 1;
-    bool allowBracket = true;
-};
-
 int main(int argc, char **argv) {
-    double d = 10;
-    std::cout << "sizeof(d) = " << sizeof(d) << std::endl;
-    std::cout << "argc = " << argc << std::endl;
-    std::cout << "**argv = " << **argv << std::endl;
     Opt opt(argc, argv);
 
-    if (opt.run_mode == 1) {
-        std::cout << "Generating data. No start server" << std::endl;
+    if (opt.genData) {
+        std::cout << "Generating data" << std::endl;
         DataFactory factory;
-        if (opt.file.compare("") == 0){
-            std::string result = factory.generate(opt.maxOperands, opt.numExpressions, opt.allowBracket);
-            std::cout << "OUTPUT\n" << result << std::endl;
+        if (opt.file.empty()){
+            std::string result = factory.generate(opt.numExpressions, opt.numOperands, opt.maxOperand, opt.minOperand, opt.allowBracket, opt.ops);
+            std::cout << "GEN EXPRESSION\n" << result << std::endl;
         } else {
-            factory.generate(opt.file, opt.maxOperands, opt.numExpressions, opt.allowBracket);
+            factory.generate(opt.file, opt.numExpressions, opt.numOperands, opt.maxOperand, opt.minOperand, opt.allowBracket, opt.ops);
         }
-    } else if (opt.run_mode == 2 || argc < 2) {
-        std::cout << "Start server only" << std::endl;
+    } else  {
+        std::cout << "Start server" << std::endl;
         TcpServer server(opt.port, opt.poolSize);
         server.start();
-    } else if (opt.run_mode == 3) {
-        std::cout << "Generating data & Start server" << std::endl;
-        DataFactory factory;
-        if (opt.file.compare("") == 0){
-            std::string result = factory.generate(opt.maxOperands, opt.numExpressions, opt.allowBracket);
-            std::cout << "GEN OUTPUT DATA\n" << result << std::endl;
-        } else {
-            factory.generate(opt.file, opt.maxOperands, opt.numExpressions, opt.allowBracket);
-        }
-        TcpServer server(opt.port, opt.poolSize);
-        server.start();
-    } else {
-        std::cout << "wrong mode" << std::endl;
     }
 }

@@ -26,10 +26,13 @@ private:
 class Evaluation {
 public:
     Evaluation(){};
+    static bool isValid(char c);
     static bool isOperator(char c);
     static int getWeight(char op) ;
     static double applyOp(char op, double a, double b);
     static bool hasPriority(char op1, char op2);
+    static char* stringToCharPointer(std::string s, int& len);
+    static char* doubleToCharPointer(double d, int& len);
 //    static std::string postfixConversion(std::string exp) ;
 //    static double evaluatePostfix(std::string exp);
     static double evaluate(const std::string& exp);

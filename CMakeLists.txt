@@ -13,7 +13,6 @@ add_executable(StringEvaluation
         src/common/FileDescriptor.cpp
         src/math/Evaluation.cpp
         src/math/Expression.cpp
-        src/server/TcpClient.cpp
         src/server/TcpServer.cpp
         src/factory/DataFactory.cpp
         mainServer.cpp

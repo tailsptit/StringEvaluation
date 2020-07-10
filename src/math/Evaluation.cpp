@@ -8,6 +8,13 @@
 
 #include "../../include/Evaluation.h"
 
+
+bool Evaluation::isValid(char c) {
+    return (('0' <= c) && (c <= '9')) ||
+           (c == '+') || (c == '-') || (c == '*') || (c == '/') ||
+           (c == '(') || (c == ')');
+}
+
 bool Evaluation::isOperator(char c) {
     return (c == '+') || (c == '-') || (c == '*') || (c == '/');
 }
@@ -20,24 +27,42 @@ int Evaluation::getWeight(char op) {
     return 0;
 }
 
-double Evaluation::applyOp(char op, double a, double b){
+double Evaluation::applyOp(char op, double a, double b) {
     switch (op) {
-        case '+': return a + b;
-        case '-': return a - b;
-        case '*': return a * b;
-        case '/':return a / b;
+        case '+':
+            return a + b;
+        case '-':
+            return a - b;
+        case '*':
+            return a * b;
+        case '/':
+            return a / b;
     }
     return 0;
 }
 
-bool Evaluation::hasPriority(char op1, char op2){
-    if (op2  == '(' || op2 == ')')
+bool Evaluation::hasPriority(char op1, char op2) {
+    if (op2 == '(' || op2 == ')')
         return false;
-    if ((op1  == '*' || op1 == '/') && (op2  == '+' || op2 == '-'))
+    if ((op1 == '*' || op1 == '/') && (op2 == '+' || op2 == '-'))
         return false;
     else
         return true;
 }
+
+char *Evaluation::stringToCharPointer(std::string s, int &len) {
+    len = s.size();
+    char *result = new char[len + 1];
+    std::copy(s.begin(), s.end(), result);
+    result[len] = '\0';
+    return result;
+};
+
+char *Evaluation::doubleToCharPointer(double d, int &len) {
+    std::string str = std::to_string(d);
+    return stringToCharPointer(str, len);
+};
+
 ///*
 //  Infix to postfix conversion. Only +, -, *, / operators are expected.
 //*/
@@ -121,7 +146,7 @@ bool Evaluation::hasPriority(char op1, char op2){
 //    return stack.peek();
 //}
 
-double Evaluation::evaluate(const std::string& exp) {
+double Evaluation::evaluate(const std::string &exp) {
     Stack<double> values;
     Stack<char> ops;
     int i;
@@ -129,12 +154,11 @@ double Evaluation::evaluate(const std::string& exp) {
     // scan all characters one by one
     for (i = 0; i < exp.length(); i++) {
         // if character is blank space then continue
-        if (isblank(exp[i]) ) continue;
+        if (isblank(exp[i])) continue;
 
-        if (exp[i] == '('){
+        if (exp[i] == '(') {
             ops.push(exp[i]);
-        }
-        else if (isdigit(exp[i])){
+        } else if (isdigit(exp[i])) {
             double digit = 0.0;
             while (i < exp.length() && isdigit(exp[i])) {
                 digit = (digit * 10.0) + (exp[i] - '0');
@@ -143,20 +167,20 @@ double Evaluation::evaluate(const std::string& exp) {
             i--;
             values.push(digit);
         }
-        // if the character is an ')', pop and output from the stack util an '(' is encountered
-        else if (exp[i] == ')'){
-            while(!ops.empty() && ops.peek() != '('){
+            // if the character is an ')', pop and output from the stack util an '(' is encountered
+        else if (exp[i] == ')') {
+            while (!ops.empty() && ops.peek() != '(') {
                 int val2 = values.pop();
                 int val1 = values.pop();
                 values.push(applyOp(ops.pop(), val1, val2));
             }
             // pop opening brace.
-            if(!ops.empty())
+            if (!ops.empty())
                 ops.pop();
         }
-        // character is an operator
-        else  if (isOperator(exp[i])){
-            while (!ops.empty() && getWeight(ops.peek()) >= getWeight(exp[i])){
+            // character is an operator
+        else if (isOperator(exp[i])) {
+            while (!ops.empty() && getWeight(ops.peek()) >= getWeight(exp[i])) {
                 int val2 = values.pop();
                 int val1 = values.pop();
                 values.push(applyOp(ops.pop(), val1, val2));
@@ -166,7 +190,7 @@ double Evaluation::evaluate(const std::string& exp) {
         }
     }
     // pop all the operators from the stack
-    while (!ops.empty()){
+    while (!ops.empty()) {
         int val2 = values.pop();
         int val1 = values.pop();
         values.push(applyOp(ops.pop(), val1, val2));

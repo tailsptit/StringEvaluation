@@ -339,33 +339,6 @@ src/math/Expression.cpp.s:
 	$(MAKE) -f CMakeFiles/StringEvaluation.dir/build.make CMakeFiles/StringEvaluation.dir/src/math/Expression.cpp.s
 .PHONY : src/math/Expression.cpp.s
 
-src/server/TcpClient.o: src/server/TcpClient.cpp.o
-
-.PHONY : src/server/TcpClient.o
-
-# target to build an object file
-src/server/TcpClient.cpp.o:
-	$(MAKE) -f CMakeFiles/StringEvaluation.dir/build.make CMakeFiles/StringEvaluation.dir/src/server/TcpClient.cpp.o
-.PHONY : src/server/TcpClient.cpp.o
-
-src/server/TcpClient.i: src/server/TcpClient.cpp.i
-
-.PHONY : src/server/TcpClient.i
-
-# target to preprocess a source file
-src/server/TcpClient.cpp.i:
-	$(MAKE) -f CMakeFiles/StringEvaluation.dir/build.make CMakeFiles/StringEvaluation.dir/src/server/TcpClient.cpp.i
-.PHONY : src/server/TcpClient.cpp.i
-
-src/server/TcpClient.s: src/server/TcpClient.cpp.s
-
-.PHONY : src/server/TcpClient.s
-
-# target to generate assembly for a file
-src/server/TcpClient.cpp.s:
-	$(MAKE) -f CMakeFiles/StringEvaluation.dir/build.make CMakeFiles/StringEvaluation.dir/src/server/TcpClient.cpp.s
-.PHONY : src/server/TcpClient.cpp.s
-
 src/server/TcpServer.o: src/server/TcpServer.cpp.o
 
 .PHONY : src/server/TcpServer.o
@@ -426,9 +399,6 @@ help:
 	@echo "... src/math/Expression.o"
 	@echo "... src/math/Expression.i"
 	@echo "... src/math/Expression.s"
-	@echo "... src/server/TcpClient.o"
-	@echo "... src/server/TcpClient.i"
-	@echo "... src/server/TcpClient.s"
 	@echo "... src/server/TcpServer.o"
 	@echo "... src/server/TcpServer.i"
 	@echo "... src/server/TcpServer.s"

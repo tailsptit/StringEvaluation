@@ -1,7 +1,6 @@
 #include <cstdio>
 #include <netinet/in.h>
 #include <sys/socket.h>
-#include <fcntl.h>
 #include <arpa/inet.h>
 #include <iostream>
 
@@ -9,8 +8,6 @@
 #include "../../include/TcpServer.h"
 #include "../../include/Evaluation.h"
 #include "../../include/BufferedDataReader.h"
-
-#define BUFSIZE 256
 
 TcpServer::TcpServer(int port, int poolSize) : eventManger(poolSize) {
     std::cout << "Create server socket a port " << port << std::endl;
@@ -23,9 +20,7 @@ void TcpServer::start() {
         return;
     }
     // TODO: Submit it to event manager.
-    std::cout << "Add a CallBack for handling connection" << std::endl;
     eventManger.addTask(new CallBack(&TcpServer::handleTcpConnection, this));
-    std::cout << "Start EventManager" << std::endl;
     eventManger.start();
     eventManger.awaitTermination();
     std::cout << "Terminate server" << std::endl;
@@ -37,13 +32,7 @@ void TcpServer::handleTcpConnection() {
     /* Accept actual connection from the client */
     while (true) {
         int accept_fd = accept(listenSocket->getFd(), (struct sockaddr *) &client_addr, &client_addr_len);
-        std::cout << "accept_fd = " << accept_fd << std::endl;
-
-//        int x = fcntl(accept_fd, F_GETFL, 0);
-//        fcntl(accept_fd, F_SETFL, x | O_NONBLOCK);
-
         static int num = 0;
-        printf("Accept ************** Accept %d *******************\n", ++num);
         if (accept_fd < 0) {
             std::cerr << "ERORR: Accept connection failed" << std::endl;
             continue;
@@ -51,10 +40,8 @@ void TcpServer::handleTcpConnection() {
         std::cout << "Accept new connection from " << inet_ntoa(client_addr.sin_addr) << ":"
                   << ntohs(client_addr.sin_port) << std::endl;
         std::cout << "Total connection: " << ++num << std::endl;
-        // TOOD: Submit it to event manager.
+        std::cout << "Change to Reading mode. Socket Id = " << accept_fd << std::endl;
         eventManger.addTaskWaitingReadable(accept_fd, new CallBack(&TcpServer::handleReadRequest, this, accept_fd));
-        std::cout << "addTaskWaitingReadable" << std::endl;
-
     }
 }
 
@@ -84,43 +71,43 @@ void TcpServer::handleReadRequest(int fd) {
         char c;
         int nread;
         bool isError = false;
-        char* writeData;
-        int* len = new int;
+        std::string error;
+
         std::string expresion;
         while ((nread = br.read(&c)) > 0) {
             if (c == '\n') {
                 if (expresion.empty() && !isError) {
-                    writeData = Evaluation::stringToCharPointer("Empty String", *len);
                     break;
                 }
+                char* writeData;
+                int* len = new int;
                 if (!isError){
                     double expressionResult = processExpression(expresion);
                     writeData = Evaluation::doubleToCharPointer(expressionResult, *len);
+                } else {
+                    writeData = Evaluation::stringToCharPointer(error, *len);
                 }
                 message->resetBuffer(*len + 1);
                 message->writeToBuffer(writeData, *len + 1);
                 message->setState(Message::WRITING);
+                delete len;
+                delete [] writeData;
                 break;
             } else if (!Evaluation::isValid(c) && !isError){
                 isError = true;
-                string error("ERROR: Invalid character in expresion: ");
+                error = "ERROR: Invalid character in expresion: ";
                 error += c;
-                std::cout << error << std::endl;
-                writeData = Evaluation::stringToCharPointer(error, *len);
             } else if (c != ' ') {
                 expresion += c;
             }
         }
-        delete len;
-        delete [] writeData;
-        // Unexpected EOF or errno other than EAGAIN.
-        if ((errno != EAGAIN && errno != 0)) {
+        if ((nread == 0) || (errno != EAGAIN && errno != 0)) {
+            std::cout << "Close connection. Socket Id " << fd << std::endl;
             removeSession(fd);
             return;
         }
     }
-
-    // Check message status and submit new handlers to event manager.
+    // Submit new handler to event manager
     if (message->getState() == Message::INIT || message->getState() == Message::READING) {
         std::cout << "Re-Adding to Reading mode. Socket Id = " << fd << std::endl;
         eventManger.modifyTaskWaitingStatus(fd, EPOLLIN | EPOLLONESHOT,
@@ -148,8 +135,6 @@ void TcpServer::handleWriteRequest(int fd) {
     if (nwrite < 0) {
         removeSession(fd);
     }
-
-    // removeSession(fd);
     std::cout << "Change to Reading mode. Socket Id = " << fd << std::endl;
     message->setState(Message::READING);
     eventManger.modifyTaskWaitingStatus(fd, EPOLLIN | EPOLLONESHOT,
@@ -157,13 +142,10 @@ void TcpServer::handleWriteRequest(int fd) {
 }
 
 void TcpServer::removeSession(int fd) {
-    // Remove fd from epoll.
+    // Remove fd from Epoll.
     eventManger.removeAwaitingTask(fd);
-
-    // Potential race condition: don't closeFd fd before de-registering the event from event manager.
     close(fd);
-
-    // Delete fd_message map record.
+    // Delete socket fd from map
     {
         std::unique_lock<std::mutex> lock(mtx);
         if (mapMessages.find(fd) == mapMessages.end()) {
